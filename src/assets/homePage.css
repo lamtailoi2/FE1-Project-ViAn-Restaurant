@@ -4,6 +4,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "SFProDisplay";
   src: url("./fonts/SF-PRO-DISPLAY-REGULAR.OTF") format("opentype");
@@ -13,7 +14,9 @@
 
 body {
   margin: 0 auto;
+  background: red;
 }
+
 #header {
   width: 100%;
   height: 58px;
@@ -41,9 +44,10 @@ body {
 .item_container {
   padding: 0 155px;
 }
+
 .nav_items {
   display: inline-block;
-  margin: 0px 20px;
+  margin: 0px 21px;
   color: rgb(255, 255, 255);
 }
 
@@ -61,7 +65,9 @@ body {
   font-family: "SFProDisplay", sans-serif;
   font-size: 16px;
 }
+
 .nav_search::placeholder {
+  padding-left: 10px;
   color: rgb(110, 69, 59);
 }
 
@@ -90,7 +96,7 @@ body {
 }
 
 .slider-list img {
-  width: 1300px;
+  /* width: 1300px; */
   width: 100vw;
   height: 100%;
   object-fit: cover;
@@ -112,7 +118,6 @@ body {
   border-radius: 100%;
   border: none;
   background-color: rgb(228, 205, 172);
-  /* background-color: red; */
   margin-left: 20px;
 }
 
@@ -120,20 +125,54 @@ body {
   background-color: #6e453b;
 }
 
-  
 .fade-out {
-    opacity: 1;
-    transition: opacity 500ms ease; 
+  opacity: 1;
+  transition: opacity 500ms ease;
 }
 
 .fade-in {
-    opacity: 0;
-    transition: opacity 500ms ease; 
+  opacity: 0;
+  transition: opacity 500ms ease;
 }
+
 .fade-in.show {
-    opacity: 1;
+  opacity: 1;
 }
 
 .fade-out.hide {
-    opacity: 0;
+  opacity: 0;
+}
+
+.container {
+  width: 100%;
+}
+
+.about-us {
+  background-image: url("./imgs/bg-about-2.webp");
+  background-size: 100% 600px;
+  width: 100%;
+  height: 100vh;
+  margin-top: -40px;
+  background-repeat: no-repeat;
+}
+.container {
+  text-align: center;
+  position: relative;
+  top: 10%;
+  font-family: "iCielDownTown";
+  font-size: 2rem;
+}
+.title-bg img {
+  display: block;
+  margin: auto;
+  object-fit: cover;
+  height: 40px;
+  width: auto;
+}
+
+.text-overlay {
+  position: absolute;
+  transform: translate(-50%);
+  color: rgb(110, 69, 59);
+  font-weight: lighter;
 }
