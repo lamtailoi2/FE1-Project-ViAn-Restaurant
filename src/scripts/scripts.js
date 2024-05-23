@@ -1,6 +1,9 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+
+//---------------------------------homePage
+
 let dots = $$(".switch");
 let img = $(".slider-item img");
 
@@ -41,4 +44,6 @@ dots.forEach((dot, index) => {
     reloadImg(tabIndex);
   });
 });
+
+//---------------------------------homePage
 
