@@ -86,6 +86,7 @@ body {
   left: 0;
   display: flex;
   width: max-content;
+  height: 100%;
 }
 
 .slider-list img {
@@ -99,8 +100,9 @@ body {
   position: absolute;
   list-style-type: none;
   display: flex;
+  justify-content: center;
   left: 50%;
-  top: 100%;
+  top: 95%;
   transform: translateX(-50%);
 }
 
@@ -116,4 +118,22 @@ body {
 
 .slider-dots button.active {
   background-color: #6e453b;
+}
+
+  
+.fade-out {
+    opacity: 1;
+    transition: opacity 500ms ease; 
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 500ms ease; 
+}
+.fade-in.show {
+    opacity: 1;
+}
+
+.fade-out.hide {
+    opacity: 0;
 }
