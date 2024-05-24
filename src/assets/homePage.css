@@ -14,7 +14,7 @@
 
 body {
   margin: 0 auto;
-  background: red;
+  /* background: red; */
 }
 
 #header {
@@ -78,27 +78,26 @@ body {
   color: rgb(221, 197, 165);
 }
 
+
 .slider {
   position: relative;
   width: 100%;
   max-width: 100vw;
-  margin: auto;
-  height: 700px;
+  height: auto;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 .slider-list {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   display: flex;
-  width: max-content;
+  width: 100%;
   height: 100%;
 }
 
 .slider-list img {
-  /* width: 1300px; */
-  width: 100vw;
-  height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -108,8 +107,9 @@ body {
   display: flex;
   justify-content: center;
   left: 50%;
-  top: 95%;
+  bottom: 10px;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 .slider-dots button {
@@ -124,6 +124,7 @@ body {
 .slider-dots button.active {
   background-color: #6e453b;
 }
+
 
 .fade-out {
   opacity: 1;
@@ -152,7 +153,6 @@ body {
   background-size: 100% 600px;
   width: 100%;
   height: 100vh;
-  margin-top: -40px;
   background-repeat: no-repeat;
 }
 .container {
