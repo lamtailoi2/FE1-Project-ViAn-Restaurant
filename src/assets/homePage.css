@@ -51,6 +51,25 @@ body {
     color: rgb(255, 255, 255);
 }
 
+/* CSS để xóa gạch chân và màu tím cho liên kết */
+.nav_items a {
+    text-decoration: none; /* Xóa gạch chân */
+    color: #fff; /* Đặt màu chữ mặc định */
+}
+
+.nav_items a:visited {
+    color: #fff; /* Xóa màu tím của liên kết đã truy cập */
+}
+
+.nav_items a:hover {
+    color: #fff; /* Màu chữ khi di chuột */
+    background-color: #e0e0e0; /* Thêm hiệu ứng màu nền khi di chuột */
+}
+
+.nav_items a:active {
+    color: #fff; /* Màu chữ khi nhấn */
+}
+
 .nav_search {
     color: rgb(110, 69, 59);
     min-width: 225px;
