@@ -96,7 +96,6 @@ body {
 }
 
 .slider-list img {
-  /* width: 1300px; */
   width: 100vw;
   height: 100%;
   object-fit: cover;
@@ -145,6 +144,11 @@ body {
 
 .container {
   width: 100%;
+  text-align: center;
+  position: relative;
+  top: 10%;
+  font-family: "iCielDownTown";
+  font-size: 2rem;
 }
 
 .about-us {
@@ -155,13 +159,7 @@ body {
   margin-top: -40px;
   background-repeat: no-repeat;
 }
-.container {
-  text-align: center;
-  position: relative;
-  top: 10%;
-  font-family: "iCielDownTown";
-  font-size: 2rem;
-}
+
 .title-bg img {
   display: block;
   margin: auto;
