@@ -12,8 +12,16 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 100;
+}
+
 body {
   margin: 0 auto;
+  font-weight: 100;
   /* background: red; */
 }
 
@@ -54,7 +62,7 @@ body {
 .nav_search {
   color: rgb(110, 69, 59);
   min-width: 225px;
-  width: 220px;
+  width: 201px;
   min-height: 25px;
   height: 50%;
   border: 0;
@@ -77,7 +85,6 @@ body {
   text-decoration: none;
   color: rgb(221, 197, 165);
 }
-
 
 .slider {
   position: relative;
@@ -107,8 +114,8 @@ body {
   display: flex;
   justify-content: center;
   left: 50%;
-  bottom: 10px;
-  transform: translateX(-50%);
+  bottom: 20px;
+  transform: translate(-50%, -20%);
   z-index: 1;
 }
 
@@ -124,7 +131,6 @@ body {
 .slider-dots button.active {
   background-color: #6e453b;
 }
-
 
 .fade-out {
   opacity: 1;
@@ -149,30 +155,86 @@ body {
 }
 
 .about-us {
-  background-image: url("./imgs/bg-about-2.webp");
+  background-image: radial-gradient(ellipse, #0000, #0007),
+    /* linear-gradient(0deg, #9725, #9725), */ url("./imgs/bg-about-2.webp");
   background-size: 100% 600px;
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
+  margin-top: -5px;
 }
 .container {
   text-align: center;
   position: relative;
   top: 10%;
   font-family: "iCielDownTown";
-  font-size: 2rem;
-}
-.title-bg img {
-  display: block;
-  margin: auto;
-  object-fit: cover;
-  height: 40px;
-  width: auto;
+  font-weight: lighter;
+  color: rgb(110, 69, 59, 1);
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-align: center;
 }
 
-.text-overlay {
+.title {
+  font-size: 40px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+  z-index: 12;
+}
+
+.title::after {
+  content: "";
+  width: 320px;
+  height: 100%;
+  left: 50%;
+  bottom: -38%;
+  background-image: url("imgs/bottom-title.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
   position: absolute;
-  transform: translate(-50%);
-  color: rgb(110, 69, 59);
-  font-weight: lighter;
+  transform: translate(-50%, 0);
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+}
+
+.about-text {
+  width: 30%;
+  padding: 0 20px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.about-text h2 {
+  margin-bottom: 10px;
+}
+
+.about-text h3,
+p {
+  font-size: 14pt;
+  margin-bottom: 5px;
+}
+.about-text p {
+  font-family: "SFProDisplay";
+  font-size: 16px;
+  color: #212529;
+}
+
+.about-img {
+  width: 30%;
+}
+.about-img img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+strong {
+  font-weight: bold;
 }
