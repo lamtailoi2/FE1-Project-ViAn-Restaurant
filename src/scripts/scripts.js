@@ -1,51 +1,62 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-//---------------------------------homePage
+// Convert NodeList to Array
+let dots = Array.from($$(".switch"));
 
-let dots = $$(".switch");
-let img = $(".slider-item img");
+let homeTopImg = $(".hometop-img");
+console.log(homeTopImg);
+let aboutImg = $(".about-img img");
+console.log(aboutImg);
 
-let length = dots.length;
-let tabIndex = 0;
+let homeTopDots = dots.slice(0, 2);
+let aboutDots = dots.slice(2);
 
-const updateImg = (index) => {
-  img.classList.remove("show");
-  img.classList.remove("fade-in");
-  img.classList.add("fade-out");
-  img.classList.add("hide");
+let homeTabIndex = 0;
+let aboutTabIndex = 0;
+
+const updateImg = (index, section, img) => {
+  console.log(`Updating ${section} image to index ${index}`);
+  img.classList.remove("show", "fade-in");
+  img.classList.add("fade-out", "hide");
   setTimeout(() => {
-    img.setAttribute("src", `./imgs/slide${index + 1}.jpg`);
-    img.classList.remove("fade-out");
-    img.classList.remove("hide");
-    img.classList.add("fade-in");
-    img.classList.add("show");
+    img.setAttribute("src", `./imgs/${section}${index + 1}.jpg`);
+    img.classList.remove("fade-out", "hide");
+    img.classList.add("fade-in", "show");
   }, 300);
 };
 
-const reloadImg = (index) => {
-  dots.forEach((dot) => {
+const updateDot = (index, sectionDots) => {
+  sectionDots.forEach((dot) => {
     dot.classList.remove("active");
   });
-  updateImg(index);
-  dots[index].classList.add("active");
+  sectionDots[index].classList.add("active");
 };
 
-const intervalSwitchImg = setInterval(() => {
-  if (tabIndex + 1 > length - 1) {
-    tabIndex = 0;
-  } else {
-    tabIndex += 1;
-  }
-  reloadImg(tabIndex);
-}, 15000);
-
-dots.forEach((dot, index) => {
+aboutDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
-    tabIndex = index;
-    updateImg(tabIndex);
-    
+    aboutTabIndex = index;
+    updateDot(aboutTabIndex, aboutDots);
+    updateImg(aboutTabIndex, "about", aboutImg);
   });
 });
 
-//---------------------------------homePage
+homeTopDots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    homeTabIndex = index;
+    updateDot(homeTabIndex, homeTopDots);
+    updateImg(homeTabIndex, "hometop", homeTopImg);
+  });
+});
+
+const refreshHomeImg = setInterval(() => {
+  homeTabIndex = (homeTabIndex + 1) % homeTopDots.length;
+  updateDot(homeTabIndex, homeTopDots);
+  updateImg(homeTabIndex, "hometop", homeTopImg);
+}, 15000);
+
+const refreshAboutImg = setInterval(() => {
+  aboutTabIndex = (aboutTabIndex + 1) % aboutDots.length;
+  updateDot(aboutTabIndex, aboutDots);
+  updateImg(aboutTabIndex, "about", aboutImg);
+}, 15000);
