@@ -196,7 +196,7 @@ body {
   justify-content: center;
 }
 .title span {
-  font-size: 40px;
+  font-size: 2.5rem;
   display: inline-block;
   margin-bottom: 40px;
   z-index: 12;
@@ -204,15 +204,15 @@ body {
 
 .title img {
   content: "";
-  width: 320px;
+  width: 250px;
   height: 40px;
   background-repeat: no-repeat;
-  background-position: center; /* Adjust for image centering */
-  background-size: cover; /* Stretch image to fill container (optional) */
+  background-position: center; 
+  background-size: cover; 
   position: absolute;
   z-index: 10;
   left: 50%;
-  bottom: 35%;
+  bottom: 30%;
   transform: translate(-50%, 0);
 }
 
