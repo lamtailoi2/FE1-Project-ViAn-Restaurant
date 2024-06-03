@@ -1,17 +1,12 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-// Convert NodeList to Array
+//------------------------------------------------------------------------------Home page
 let dots = Array.from($$(".switch"));
-
 let homeTopImg = $(".hometop-img");
-console.log(homeTopImg);
 let aboutImg = $(".about-img img");
-console.log(aboutImg);
-
 let homeTopDots = dots.slice(0, 2);
 let aboutDots = dots.slice(2);
-
 let homeTabIndex = 0;
 let aboutTabIndex = 0;
 
@@ -33,6 +28,7 @@ const updateDot = (index, sectionDots) => {
   sectionDots[index].classList.add("active");
 };
 
+//handle click event for about dots
 aboutDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     aboutTabIndex = index;
@@ -41,6 +37,7 @@ aboutDots.forEach((dot, index) => {
   });
 });
 
+//handle click event for hometop dots
 homeTopDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     homeTabIndex = index;
@@ -49,14 +46,24 @@ homeTopDots.forEach((dot, index) => {
   });
 });
 
-const refreshHomeImg = setInterval(() => {
-  homeTabIndex = (homeTabIndex + 1) % homeTopDots.length;
-  updateDot(homeTabIndex, homeTopDots);
-  updateImg(homeTabIndex, "hometop", homeTopImg);
-}, 15000);
+const startInterval = (tabIndex, dots, section, sectionImg) => {
+  return setInterval(() => {
+    tabIndex = (tabIndex + 1) % dots.length;
+    updateDot(tabIndex, dots);
+    updateImg(tabIndex, section, sectionImg);
+  }, 15000);
+};
 
-const refreshAboutImg = setInterval(() => {
-  aboutTabIndex = (aboutTabIndex + 1) % aboutDots.length;
-  updateDot(aboutTabIndex, aboutDots);
-  updateImg(aboutTabIndex, "about", aboutImg);
-}, 15000);
+const refreshHomeImg = startInterval(
+  homeTabIndex,
+  homeTopDots,
+  "hometop",
+  homeTopImg
+);
+const refreshAboutImg = startInterval(
+  aboutTabIndex,
+  aboutDots,
+  "about",
+  aboutImg
+);
+//------------------------------------------------------------------------------Home page
