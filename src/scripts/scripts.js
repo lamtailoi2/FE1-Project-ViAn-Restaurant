@@ -1,49 +1,69 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
+//------------------------------------------------------------------------------Home page
+let dots = Array.from($$(".switch"));
+let homeTopImg = $(".hometop-img");
+let aboutImg = $(".about-img img");
+let homeTopDots = dots.slice(0, 2);
+let aboutDots = dots.slice(2);
+let homeTabIndex = 0;
+let aboutTabIndex = 0;
 
-//---------------------------------homePage
+const updateImg = (index, section, img) => {
+  console.log(`Updating ${section} image to index ${index}`);
+  img.classList.remove("show", "fade-in");
+  img.classList.add("fade-out", "hide");
+  setTimeout(() => {
+    img.setAttribute("src", `./imgs/${section}${index + 1}.jpg`);
+    img.classList.remove("fade-out", "hide");
+    img.classList.add("fade-in", "show");
+  }, 300);
+};
 
-let dots = $$(".switch");
-let img = $(".slider-item img");
+const updateDot = (index, sectionDots) => {
+  sectionDots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  sectionDots[index].classList.add("active");
+};
 
-let length = dots.length;
-let tabIndex = 0;
-
-const reloadImg = (index) => {
-    dots.forEach((dot) => {
-        dot.classList.remove("active");
-      });
-      img.classList.remove("show");
-      img.classList.remove("fade-in");
-      img.classList.add("fade-out");
-      img.classList.add("hide");
-      setTimeout(() => {
-        img.setAttribute("src", `./imgs/slide${index + 1}.jpg`);
-        img.classList.remove("fade-out");
-        img.classList.remove("hide");
-        img.classList.add("fade-in");
-        img.classList.add("show");
-      }, 300);
-      dots[index].classList.add("active");
-}
-
-const intervalSwitchImg = setInterval(() => {
-  
-  if (tabIndex + 1  > length - 1  ) {
-    tabIndex = 0;
-  } else {
-    tabIndex += 1;
-  }
-  reloadImg(tabIndex);
-}, 15000);
-
-dots.forEach((dot, index) => {
+//handle click event for about dots
+aboutDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
-    tabIndex = index;
-    reloadImg(tabIndex);
+    aboutTabIndex = index;
+    updateDot(aboutTabIndex, aboutDots);
+    updateImg(aboutTabIndex, "about", aboutImg);
   });
 });
 
-//---------------------------------homePage
+//handle click event for hometop dots
+homeTopDots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    homeTabIndex = index;
+    updateDot(homeTabIndex, homeTopDots);
+    updateImg(homeTabIndex, "hometop", homeTopImg);
+  });
+});
 
+const startInterval = (tabIndex, dots, section, sectionImg) => {
+  return setInterval(() => {
+    tabIndex = (tabIndex + 1) % dots.length;
+    updateDot(tabIndex, dots);
+    updateImg(tabIndex, section, sectionImg);
+  }, 15000);
+};
+
+const refreshHomeImg = startInterval(
+  homeTabIndex,
+  homeTopDots,
+  "hometop",
+  homeTopImg
+);
+const refreshAboutImg = startInterval(
+  aboutTabIndex,
+  aboutDots,
+  "about",
+  aboutImg
+);
+//------------------------------------------------------------------------------Home page
