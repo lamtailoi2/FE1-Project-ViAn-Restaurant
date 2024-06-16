@@ -1,0 +1,23 @@
+.menu {
+    width: 100%;
+    height: auto;
+    background-image: url("imgs/noise-black.png");
+    /* opacity: 0.3; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu .menu-img {
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 10px;
+}
+
+@media (max-width: 980px) {
+    .menu .menu-img {
+        width: 100%;
+    }
+}
