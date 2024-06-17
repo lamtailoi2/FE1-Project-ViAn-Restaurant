@@ -6,12 +6,13 @@ let dots = Array.from($$(".switch"));
 let homeTopImg = $(".hometop-img");
 let aboutImg = $(".about-img img");
 let homeTopDots = dots.slice(0, 2);
-let aboutDots = dots.slice(2);
+let aboutDots = dots.slice(2, 7);
+
 let homeTabIndex = 0;
 let aboutTabIndex = 0;
 
 const updateImg = (index, section, img) => {
-  console.log(`Updating ${section} image to index ${index}`);
+  // console.log(`Updating ${section} image to index ${index}`);
   img.classList.remove("show", "fade-in");
   img.classList.add("fade-out", "hide");
   setTimeout(() => {
@@ -67,3 +68,90 @@ const refreshAboutImg = startInterval(
   aboutImg
 );
 //------------------------------------------------------------------------------Home page
+
+let fbDots = dots.slice(7);
+
+const fetchData = async () => {
+  let intervalId; // to store the interval id
+
+  try {
+    const response = await fetch("../assets/feedbacks.json");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    const feedbacks = data.feedbacks;
+
+    const feedbackContent = $(".feedback_content");
+    const feedbackDots = $(".feedback_dots");
+
+    const displayFeedback = (id) => {
+      const feedback = feedbacks.find((fb) => fb.id === id);
+      if (feedback) {
+        //clear existing content
+        feedbackContent.innerHTML = "";
+
+        //create feedback content
+        const feedbackImg = document.createElement("div");
+        feedbackImg.className = "feedback_img";
+        const img = document.createElement("img");
+        img.src = feedback.avatar;
+        img.alt = feedback.name;
+        feedbackImg.appendChild(img);
+
+        const feedbackText = document.createElement("div");
+        feedbackText.className = "feedback_text";
+        const p = document.createElement("p");
+        p.textContent = feedback.comment;
+        feedbackText.appendChild(p);
+
+        const feedbackName = document.createElement("h5");
+        feedbackName.id = "feedback_name";
+        feedbackName.textContent = feedback.name;
+
+        feedbackContent.appendChild(feedbackImg);
+        feedbackContent.appendChild(feedbackText);
+        feedbackContent.appendChild(feedbackName);
+      }
+    };
+
+    //create and append dots
+    feedbacks.forEach((feedback, index) => {
+      const dot = document.createElement("button");
+      dot.className = "switch feedback_switch";
+      dot.dataset.id = feedback.id; //set id for each dot
+
+      if (index === 0) {
+        dot.classList.add("active"); //set first dot active
+      }
+      feedbackDots.appendChild(dot);
+
+      //add click event to each dot
+      dot.addEventListener("click", (event) => {
+        $$(".feedback_switch").forEach((dot) => dot.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+        displayFeedback(parseInt(event.currentTarget.dataset.id)); //convert string to number
+      });
+    });
+
+    const startInterval = () => {
+      let currentIndex = 0;
+      intervalId = setInterval(() => {
+        $$(".feedback_switch").forEach((dot) => dot.classList.remove("active"));
+        const currentDot = $$(".feedback_switch")[currentIndex];
+        currentDot.classList.add("active");
+        displayFeedback(parseInt(currentDot.dataset.id));
+        currentIndex = (currentIndex + 1) % feedbacks.length;
+      }, 15000);
+    };
+
+    if (feedbacks.length > 0) {
+      displayFeedback(feedbacks[0].id);
+      startInterval();
+    }
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+  }
+};
+
+fetchData();
