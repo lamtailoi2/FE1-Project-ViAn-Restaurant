@@ -111,7 +111,6 @@ body a {
   align-items: center;
 }
 
-
 .nav_search::placeholder {
   color: #855e51;
   font-weight: 100;
@@ -564,7 +563,7 @@ strong {
   background-image: url("./imgs/bg-space.jpg");
   background-size: 100% 850px;
   width: 100%;
-  height: 100%;
+  height: 700px;
   max-width: 100vw;
   background-repeat: no-repeat;
   position: relative;
@@ -582,6 +581,16 @@ strong {
   background-size: 600px;
   opacity: 0.3;
   z-index: 1;
+}
+
+.feedback_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .feedback_content {
@@ -618,8 +627,6 @@ strong {
   top: 110%;
   transform: translateX(-50%);
 }
-
-
 
 .footer {
   background-color: #64473f;
@@ -711,7 +718,6 @@ strong {
 
 .social-icons a:hover {
   background-color: #ddc5a5;
-  
 }
 .footer .footer_bottom {
   margin-top: 20px;
