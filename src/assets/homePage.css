@@ -124,6 +124,14 @@ body a {
   color: rgb(221, 197, 165);
 }
 
+.nav_lang a:hover {
+  font-size: 28px;
+  margin-left: 10px;
+  padding-bottom: 1px;
+  text-decoration: none;
+  color: #ffff;
+}
+
 .slider {
   position: relative;
   width: 100%;
@@ -555,7 +563,7 @@ strong {
   background-image: url("./imgs/bg-space.jpg");
   background-size: 100% 850px;
   width: 100%;
-  height: 100%;
+  height: 700px;
   max-width: 100vw;
   background-repeat: no-repeat;
   position: relative;
@@ -573,6 +581,16 @@ strong {
   background-size: 600px;
   opacity: 0.3;
   z-index: 1;
+}
+
+.feedback_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .feedback_content {
@@ -609,8 +627,6 @@ strong {
   top: 110%;
   transform: translateX(-50%);
 }
-
-
 
 .footer {
   background-color: #64473f;
@@ -681,7 +697,7 @@ strong {
 
 .social-icons a {
   margin: 0 5px;
-  background-color: #fff;
+  background-color: #ffff;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -698,6 +714,10 @@ strong {
   display: inline-block;
   text-align: center;
   z-index: 1;
+}
+
+.social-icons a:hover {
+  background-color: #ddc5a5;
 }
 .footer .footer_bottom {
   margin-top: 20px;
