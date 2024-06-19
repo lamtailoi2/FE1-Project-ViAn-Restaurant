@@ -12,7 +12,6 @@ let homeTabIndex = 0;
 let aboutTabIndex = 0;
 let fbDots = dots.slice(7);
 const updateImg = (index, section, img) => {
-  // console.log(`update ${section} image to index ${index}`);
   img.classList.remove("show", "fade-in");
   img.classList.add("fade-out", "hide");
   setTimeout(() => {
@@ -71,19 +70,20 @@ const refreshAboutImg = startInterval(
 
 const fetchData = async () => {
   try {
-    const response = await fetch("http://localhost:3001/feedbacks");
+    const response = await fetch("../feedbacks.json");
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const feedbacks = await response.json();
-
+    const data = await response.json();
+    const feedbacks = data.feedbacks;
     const feedbackContent = $(".feedback_content");
     const feedbackDots = $(".feedback_dots");
 
     const displayFeedback = (id) => {
       const feedback = feedbacks.find((fb) => parseInt(fb.id) === id);
       if (feedback) {
-        //clear existing content
+        //clear previous content
         feedbackContent.innerHTML = "";
 
         //create feedback content
@@ -119,7 +119,6 @@ const fetchData = async () => {
         dot.classList.add("active"); //set first dot active
       }
       feedbackDots.appendChild(dot);
-      console.log(dot);
       //add click event to each dot
       dot.addEventListener("click", (event) => {
         $$(".feedback_switch").forEach((dot) => dot.classList.remove("active"));
