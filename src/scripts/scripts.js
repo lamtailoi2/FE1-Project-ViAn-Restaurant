@@ -73,13 +73,14 @@ let fbDots = dots.slice(7);
 
 const fetchData = async () => {
   try {
-    const response = await fetch("http://localhost:3001/feedbacks");
+    const response = await fetch("../src/assets/feedbacks.json");
+    
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
     const feedbacks = data.feedbacks;
-
+    console.log(feedbacks);
     const feedbackContent = $(".feedback_content");
     const feedbackDots = $(".feedback_dots");
 
