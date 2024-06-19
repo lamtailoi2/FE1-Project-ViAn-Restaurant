@@ -70,27 +70,25 @@ const refreshAboutImg = startInterval(
 //------------------------------------------------------------------------------Home page
 
 let fbDots = dots.slice(7);
-
 const fetchData = async () => {
   try {
-    const response = await fetch("../src/assets/feedbacks.json");
-    
+    const response = await fetch("http://localhost:3001/feedbacks");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const data = await response.json();
-    const feedbacks = data.feedbacks;
-    console.log(feedbacks);
+    const feedbacks = await response.json();
+    
+
     const feedbackContent = $(".feedback_content");
     const feedbackDots = $(".feedback_dots");
 
     const displayFeedback = (id) => {
-      const feedback = feedbacks.find((fb) => fb.id === id);
+      const feedback = feedbacks.find((fb) => parseInt(fb.id) === id);
       if (feedback) {
-        // clear existing content
+        //clear existing content
         feedbackContent.innerHTML = "";
 
-        // create feedback content
+        //create feedback content
         const feedbackImg = document.createElement("div");
         feedbackImg.className = "feedback_img";
         const img = document.createElement("img");
@@ -114,17 +112,17 @@ const fetchData = async () => {
       }
     };
 
-    // create and append dots
+    //create and append dots
     feedbacks.forEach((feedback, index) => {
       const dot = document.createElement("button");
       dot.className = "switch feedback_switch";
-      dot.dataset.id = feedback.id; // set id for each dot
+      dot.dataset.id = feedback.id; //set id for each dot
       if (index === 0) {
-        dot.classList.add("active"); // set first dot active
+        dot.classList.add("active"); //set first dot active
       }
       feedbackDots.appendChild(dot);
       console.log(dot);
-      // add click event to each dot
+      //add click event to each dot
       dot.addEventListener("click", (event) => {
         $$(".feedback_switch").forEach((dot) => dot.classList.remove("active"));
         event.currentTarget.classList.add("active");
@@ -140,7 +138,7 @@ const fetchData = async () => {
         currentDot.classList.add("active");
         displayFeedback(parseInt(currentDot.dataset.id));
         currentIndex = (currentIndex + 1) % feedbacks.length;
-      }, 10000);
+      }, 1000);
     };
 
     if (feedbacks.length > 0) {
