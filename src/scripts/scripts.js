@@ -10,7 +10,7 @@ let aboutDots = dots.slice(2, 7);
 
 let homeTabIndex = 0;
 let aboutTabIndex = 0;
-
+let fbDots = dots.slice(7);
 const updateImg = (index, section, img) => {
   // console.log(`update ${section} image to index ${index}`);
   img.classList.remove("show", "fade-in");
@@ -69,7 +69,6 @@ const refreshAboutImg = startInterval(
 );
 //------------------------------------------------------------------------------Home page
 
-let fbDots = dots.slice(7);
 const fetchData = async () => {
   try {
     const response = await fetch("http://localhost:3001/feedbacks");
@@ -77,7 +76,7 @@ const fetchData = async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const feedbacks = await response.json();
-    
+
     const feedbackContent = $(".feedback_content");
     const feedbackDots = $(".feedback_dots");
 
