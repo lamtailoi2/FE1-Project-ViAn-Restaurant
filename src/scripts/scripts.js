@@ -16,7 +16,7 @@ const updateImg = (index, section, img) => {
   img.classList.remove("show", "fade-in");
   img.classList.add("fade-out", "hide");
   setTimeout(() => {
-    img.setAttribute("src", `./imgs/${section}${index + 1}.jpg`);
+    img.setAttribute("src", `./assets/imgs/${section}${index + 1}.jpg`);
     img.classList.remove("fade-out", "hide");
     img.classList.add("fade-in", "show");
   }, 300);
@@ -72,10 +72,8 @@ const refreshAboutImg = startInterval(
 let fbDots = dots.slice(7);
 
 const fetchData = async () => {
-  let intervalId; // to store the interval id
-
   try {
-    const response = await fetch("../assets/feedbacks.json");
+    const response = await fetch("../src/assets/feedbacks.json");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -88,10 +86,10 @@ const fetchData = async () => {
     const displayFeedback = (id) => {
       const feedback = feedbacks.find((fb) => fb.id === id);
       if (feedback) {
-        //clear existing content
+        // clear existing content
         feedbackContent.innerHTML = "";
 
-        //create feedback content
+        // create feedback content
         const feedbackImg = document.createElement("div");
         feedbackImg.className = "feedback_img";
         const img = document.createElement("img");
@@ -115,34 +113,33 @@ const fetchData = async () => {
       }
     };
 
-    //create and append dots
+    // create and append dots
     feedbacks.forEach((feedback, index) => {
       const dot = document.createElement("button");
       dot.className = "switch feedback_switch";
-      dot.dataset.id = feedback.id; //set id for each dot
-
+      dot.dataset.id = feedback.id; // set id for each dot
       if (index === 0) {
-        dot.classList.add("active"); //set first dot active
+        dot.classList.add("active"); // set first dot active
       }
       feedbackDots.appendChild(dot);
-
-      //add click event to each dot
+      console.log(dot);
+      // add click event to each dot
       dot.addEventListener("click", (event) => {
         $$(".feedback_switch").forEach((dot) => dot.classList.remove("active"));
         event.currentTarget.classList.add("active");
-        displayFeedback(parseInt(event.currentTarget.dataset.id)); //convert string to number
+        displayFeedback(parseInt(event.currentTarget.dataset.id)); // convert string to number
       });
     });
 
     const startInterval = () => {
       let currentIndex = 0;
-      intervalId = setInterval(() => {
+      setInterval(() => {
         $$(".feedback_switch").forEach((dot) => dot.classList.remove("active"));
         const currentDot = $$(".feedback_switch")[currentIndex];
         currentDot.classList.add("active");
         displayFeedback(parseInt(currentDot.dataset.id));
         currentIndex = (currentIndex + 1) % feedbacks.length;
-      }, 15000);
+      }, 10000);
     };
 
     if (feedbacks.length > 0) {
