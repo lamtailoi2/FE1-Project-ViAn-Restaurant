@@ -12,7 +12,7 @@ let homeTabIndex = 0;
 let aboutTabIndex = 0;
 
 const updateImg = (index, section, img) => {
-  // console.log(`Updating ${section} image to index ${index}`);
+  // console.log(`update ${section} image to index ${index}`);
   img.classList.remove("show", "fade-in");
   img.classList.add("fade-out", "hide");
   setTimeout(() => {
@@ -125,7 +125,7 @@ const fetchData = async () => {
       dot.addEventListener("click", (event) => {
         $$(".feedback_switch").forEach((dot) => dot.classList.remove("active"));
         event.currentTarget.classList.add("active");
-        displayFeedback(parseInt(event.currentTarget.dataset.id)); // convert string to number
+        displayFeedback(parseInt(event.currentTarget.dataset.id)); //convert string to number
       });
     });
 
@@ -137,7 +137,7 @@ const fetchData = async () => {
         currentDot.classList.add("active");
         displayFeedback(parseInt(currentDot.dataset.id));
         currentIndex = (currentIndex + 1) % feedbacks.length;
-      }, 1000);
+      }, 10000);
     };
 
     if (feedbacks.length > 0) {
