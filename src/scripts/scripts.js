@@ -78,7 +78,6 @@ const fetchData = async () => {
     }
     const feedbacks = await response.json();
     
-
     const feedbackContent = $(".feedback_content");
     const feedbackDots = $(".feedback_dots");
 
