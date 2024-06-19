@@ -15,7 +15,7 @@ const updateImg = (index, section, img) => {
   img.classList.remove("show", "fade-in");
   img.classList.add("fade-out", "hide");
   setTimeout(() => {
-    img.setAttribute("src", `./assets/imgs/${section}${index + 1}.jpg`);
+    img.setAttribute("src", `./src/assets/imgs/${section}${index + 1}.jpg`);
     img.classList.remove("fade-out", "hide");
     img.classList.add("fade-in", "show");
   }, 300);
