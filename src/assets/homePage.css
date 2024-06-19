@@ -568,6 +568,7 @@ strong {
   background-repeat: no-repeat;
   position: relative;
   padding: 5rem 0;
+  z-index: 2;
 }
 
 .feedback::before {
@@ -581,6 +582,7 @@ strong {
   background-size: 600px;
   opacity: 0.3;
   z-index: 1;
+  pointer-events: none; /*Allow to click*/
 }
 
 .feedback_container {
@@ -626,6 +628,11 @@ strong {
   left: 50%;
   top: 110%;
   transform: translateX(-50%);
+  cursor: pointer;
+}
+
+button.feedback_switch {
+  cursor: pointer;
 }
 
 .footer {

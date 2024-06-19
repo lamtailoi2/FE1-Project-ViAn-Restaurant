@@ -4,49 +4,49 @@
       "id": 1,
       "name": "Anh Quyết",
       "comment": "Nhà hàng cơm Vị An là nơi anh có thể tự tin rủ anh em bạn bè đi ăn những bữa cơm thân mật như tại nhà với những món ăn bình dân. Và sẽ là nơi anh ghé thường xuyên vào những ngày hè oi ả vì bia Sài Gòn rất mát",
-      "avatar": "./imgs/fb1.jpeg"
+      "avatar": "./assets/imgs/fb1.jpeg"
     },
     {
       "id": 2,
       "name": "Anh Công Vũ",
       "comment": "Một nơi để tìm về đúng nghĩa với mâm cơm Việt, những món ngon của bà của mẹ. Chúng mình gọi những món quen thuộc nhất nhưng đều ngon cả. Cùng bát canh cua rau mồng tơi siêu nhiều gạch cua kèm cà pháo muối giòn. Ăn xong sẽ có cả tráng miệng MIỄN PHÍ tặng kèm nữa. Quán cơm Vị An làm mình rất hài lòng",
-      "avatar": "./imgs/fb2.jpeg"
+      "avatar": "./assets/imgs/fb2.jpeg"
     },
     {
       "id": 3,
       "name": "Chị Quế",
       "comment": "Không gian đẹp, ấm cúng, đồ ăn ngon, phục vụ dễ thương, rất yêu thích quán cơm gia đình này",
-      "avatar": "./imgs/fb3.jpeg"
+      "avatar": "./assets/imgs/fb3.jpeg"
     },
     {
       "id": 4,
       "name": "Chị Phương Anh",
       "comment": "Một bữa ăn thoả mãn cả về vị giác và thị giác 😘 Không gian nhà hàng cơm Vị An phải nói là quá đẹp, góc nào cũng có hình xinh. Đồ ăn thì khỏi bàn, đúng vị gia đình nhưng lại được hình thức như nhà hàng 5 ⭐",
-      "avatar": "./imgs/fb4.jpeg"
+      "avatar": "./assets/imgs/fb4.jpeg"
     },
     {
       "id": 5,
       "name": "Chị Thấm",
       "comment": "Rất ngon , lên đồ nhanh , phục vụ 10đ, nhà hàng cơm ngon Vị An",
-      "avatar": "./imgs/fb5.jpeg"
+      "avatar": "./assets/imgs/fb5.jpeg"
     },
     {
       "id": 6,
       "name": "Anh Kiên",
       "comment": "Quán cơm mà không gian view hồ cứ phải gọi là xịn. Đồ ăn ngon, nên trải nghiệm set trong menu nha",
-      "avatar": "./imgs/fb6.jpeg"
+      "avatar": "./assets/imgs/fb6.jpeg"
     },
     {
       "id": 7,
       "name": "Anh Phùng",
       "comment": "Không gian bài trí đẹp, thoáng. Đồ ăn nấu rất vừa ăn sạch sẽ nhân viên nhiệt tình",
-      "avatar": "./imgs/fb7.jpeg"
+      "avatar": "./assets/imgs/fb7.jpeg"
     },
     {
       "id": 8,
       "name": "Chị Xuân",
       "comment": "Lần đầu ra HN được bạn mời đi ăn quán này khá ưng nhá.Không gian quán sạch, mát, đẹp. Phục vụ thì rất ưng bụng nha",
-      "avatar": "./imgs/fb8.jpeg"
+      "avatar": "./assets/imgs/fb8.jpeg"
     }
   ]
 }
