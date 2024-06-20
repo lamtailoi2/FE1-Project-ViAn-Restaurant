@@ -70,7 +70,13 @@ const refreshAboutImg = startInterval(
 
 const fetchData = async () => {
   try {
-    const response = await fetch("http://localhost:3001/feedbacks");
+    const response = await fetch("http://localhost:3001/feedbacks", {
+      mode: "cors",
+      method: "GET",
+      headers: {
+        contentType: "application/json",
+      },
+    });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
