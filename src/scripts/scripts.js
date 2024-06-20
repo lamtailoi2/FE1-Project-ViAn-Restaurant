@@ -70,24 +70,17 @@ const refreshAboutImg = startInterval(
 
 const fetchData = async () => {
   try {
-    const response = await fetch("http://localhost:3001/feedbacks", {
-      mode: "cors",
-      method: "GET",
-      credentials: "same-origin",
-      headers: {
-        contentType: "application/json",
-      },
-    });
-
+    const response = await fetch("/feedbacks.json", { method: "GET" });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const feedbacks = await response.json();
+    const data = await response.json();
+    const feedbacks = await data.feedbacks;
     const feedbackContent = $(".feedback_content");
     const feedbackDots = $(".feedback_dots");
 
-    const displayFeedback = (id) => {
-      const feedback = feedbacks.find((fb) => parseInt(fb.id) === id);
+    const displayFeedback = async (id) => {
+      const feedback = await feedbacks.find((fb) => parseInt(fb.id) === id);
       if (feedback) {
         //clear previous content
         feedbackContent.innerHTML = "";

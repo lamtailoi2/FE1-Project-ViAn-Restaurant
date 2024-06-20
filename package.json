@@ -6,7 +6,7 @@
   "scripts": {
     "start": "json-server --watch feedbacks.json --port 3001",
     "build": "json-server --watch feedbacks.json --port 3001",
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "type": "module",
