@@ -73,6 +73,7 @@ const fetchData = async () => {
     const response = await fetch("http://localhost:3001/feedbacks", {
       mode: "cors",
       method: "GET",
+      credentials: "same-origin",
       headers: {
         contentType: "application/json",
       },
