@@ -27,6 +27,7 @@ const updateDot = (index, sectionDots) => {
   sectionDots[index].classList.add("active");
 };
 
+//handle click event for aboutDots
 aboutDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     aboutTabIndex = index;
@@ -42,6 +43,7 @@ aboutDots.forEach((dot, index) => {
   });
 });
 
+//handle click event for homeTopDots
 homeTopDots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     homeTabIndex = index;
