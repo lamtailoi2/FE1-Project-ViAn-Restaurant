@@ -2,6 +2,26 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 //------------------------------------------------------------------------------Home page
+
+
+
+//hamburger menu
+const menu = $("#menu");
+
+menu.addEventListener("click", () => {
+  const navLink = $(".nav_link");
+  navLink.style.display = navLink.style.display === "block" ? "none" : "block";
+
+  if (navLink.style.display === "block") {
+    menu.classList.remove("fa-bars");
+    menu.classList.add("fa-x");
+  } else {
+    menu.classList.remove("fa-x");
+    menu.classList.add("fa-bars");
+  }
+});
+
+
 let dots = Array.from($$(".switch"));
 let homeTopImg = $(".hometop-img");
 let aboutImg = $(".about-img img");
@@ -149,3 +169,5 @@ const fetchData = async () => {
 fetchData();
 
 //------------------------------------------------------------------------------Home page
+
+
