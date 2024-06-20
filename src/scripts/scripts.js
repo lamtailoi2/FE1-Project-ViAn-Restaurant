@@ -15,7 +15,7 @@ const updateImg = (index, section, img) => {
   img.classList.remove("show", "fade-in");
   img.classList.add("fade-out", "hide");
   setTimeout(() => {
-    img.setAttribute("src", `./assets/imgs/${section}${index + 1}.jpg`);
+    img.setAttribute("src", `./src/assets/imgs/${section}${index + 1}.jpg`);
     img.classList.remove("fade-out", "hide");
     img.classList.add("fade-in", "show");
   }, 300);
@@ -70,7 +70,7 @@ const refreshAboutImg = startInterval(
 
 const fetchData = async () => {
   try {
-    const response = await fetch("../src/assets/feedbacks.json");
+    const response = await fetch("../public/feedbacks.json");
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
