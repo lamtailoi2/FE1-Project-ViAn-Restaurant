@@ -4,7 +4,6 @@ const $$ = document.querySelectorAll.bind(document);
 //------------------------------------------------------------------------------Home page
 
 
-
 //hamburger menu
 const menu = $("#menu");
 
@@ -20,7 +19,6 @@ menu.addEventListener("click", () => {
     menu.classList.add("fa-bars");
   }
 });
-
 
 let dots = Array.from($$(".switch"));
 let homeTopImg = $(".hometop-img");
@@ -165,9 +163,6 @@ const fetchData = async () => {
     console.error("Failed to fetch data:", error);
   }
 };
-
 fetchData();
-
 //------------------------------------------------------------------------------Home page
-
 

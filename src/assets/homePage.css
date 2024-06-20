@@ -203,10 +203,6 @@ body a {
   opacity: 0;
 }
 
-.container {
-  width: 100%;
-}
-
 .about-us {
   background-image: url("./imgs/bg-about-2.webp");
   background-size: 100% 950px;
@@ -820,13 +816,7 @@ button.feedback_switch {
     font-weight: 100;
   }
   .about-us {
-    background-image: url("./imgs/bg-about-2.webp");
-    background-size: 100% 950px;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 2rem 0;
+    padding: 10px 0;
   }
 
   .about-content {
@@ -873,5 +863,8 @@ button.feedback_switch {
   }
   .cuisine-item {
     width: 40%;
+  }
+  .about-img-slider {
+    height: 50%;
   }
 }
