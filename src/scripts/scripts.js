@@ -70,7 +70,7 @@ const refreshAboutImg = startInterval(
 
 const fetchData = async () => {
   try {
-    const response = await fetch("/feedbacks.json", { method: "GET" });
+    const response = await fetch("public/feedbacks.json", { method: "GET" });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
