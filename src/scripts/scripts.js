@@ -70,13 +70,12 @@ const refreshAboutImg = startInterval(
 
 const fetchData = async () => {
   try {
-    const response = await fetch("../public/feedbacks.json");
+    const response = await fetch("http://localhost:3001/feedbacks");
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const data = await response.json();
-    const feedbacks = data.feedbacks;
+    const feedbacks = await response.json();
     const feedbackContent = $(".feedback_content");
     const feedbackDots = $(".feedback_dots");
 
