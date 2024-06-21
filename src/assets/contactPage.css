@@ -10,4 +10,33 @@
     background-size: cover;
     padding: 7.5%;
     text-align: center;
+    z-index: -2;
+}
+
+.contact-banner_title{
+    font-family: 'iCielDownTown';
+    color: #6e453b;
+    font-size: 40px;
+    letter-spacing: 1.2px;
+    z-index: 1;
+}
+.contact-banner_title::after {
+    content: '';
+    background-image: url(./imgs/bottom-title.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: contain;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 320px; 
+    height: 100%;
+    z-index: -1;
+}
+.contact-banner_content{
+    font-family: 'SFProDisplay';
+    color: #6e453b;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
