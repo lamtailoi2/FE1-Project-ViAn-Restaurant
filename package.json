@@ -1,5 +1,23 @@
 {
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "tailwindcss": "^3.4.3"
-  }
+  },
+  "scripts": {
+    "start": "json-server --watch feedbacks.json --port 3001",
+    "build": "json-server --watch feedbacks.json --port 3001",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "type": "module",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.1"
+  },
+  "homepage": "https://lamtailoi2.github.io/FE1-Project-ViAn-Restaurant/",
+  "name": "FE1-Project-ViAn-Restaurant",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lamtailoi2/FE1-Project-ViAn-Restaurant.git",
+  "author": "Lamtailoi2 <lamtailoi11141@gmail.com>",
+  "license": "MIT"
 }

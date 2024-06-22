@@ -3,40 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./imgs/vian_logo.png" />
-    <link href="./homePage.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/assets/imgs/vian_logo.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link href="./src/assets/homePage.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/assets/menu.css">
     <title>Vị An - Cơm ngon trọn vị | Nhà hàng cơm Việt</title>
   </head>
   <body>
     <div>
-      <header id="header">
-        <nav id="navbar">
-          <div class="nav_container">
-            <a class="nav_icon" href=""
-              ><img
-                src="https://nhahangvian.com/wp-content/themes/vian/images/nhahangvian-logo.png"
-                alt=""
-            /></a>
-            <div class="item_container">
-              <ul>
-                <li class="nav_items">
-                  <a href="./about-us.html">GIỚI THIỆU</a>
-                </li>
-                <li class="nav_items">
-                  <a href="./menu.html">THỰC ĐƠN</a>
-                </li>
-                <li class="nav_items">ĐẶT BÀN</li>
-                <li class="nav_items">ALBUM ẢNH</li>
-                <li class="nav_items">LIÊN HỆ</li>
-              </ul>
-            </div>
-            <div class="nav_lang">
-              <input type="text" class="nav_search" placeholder="Tìm kiếm" />
-              <a href=""><span>EN</span></a>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <header id="header"></header>
       <div class="main-content">
         <div class="home-top">
           <div class="slider">
@@ -45,7 +27,7 @@
                 <a href="">
                   <img
                     class="hometop-img"
-                    src="./imgs/hometop1.jpg"
+                    src="./src/assets/imgs/hometop1.jpg"
                     alt="img"
                   />
                 </a>
@@ -58,10 +40,10 @@
           </div>
         </div>
         <div class="about-us">
-          <div class="container">
+          <div class="container about-container">
             <h1>
               <span class="title">
-                <img src="./imgs/bottom-title.png" alt="" />
+                <img src="./src/assets/imgs/bottom-title.png" alt="" />
                 <span> VỀ CHÚNG TÔI </span>
               </span>
             </h1>
@@ -86,16 +68,13 @@
                   Không gian tại nhà hàng cơm Vị An được lấy cảm hứng từ những
                   giá trị truyền thống của Việt Nam kết hợp với những thứ hiện
                   đại để tạo nên một cảm giác xưa cũ kết hợp cùng những thứ mới
-                  mẻ.
-                </p>
-                <p>
-                  Với chủ đạo là gỗ và cây, những thứ gắn liền nhất với thiên
-                  nhiên sẽ khiến trải nghiệm dùng bữa thực sự khác biệt!
+                  mẻ. Với chủ đạo là gỗ và cây, những thứ gắn liền nhất với
+                  thiên nhiên sẽ khiến trải nghiệm dùng bữa thực sự khác biệt!
                 </p>
               </div>
               <div class="about-img">
                 <div class="about-img-slider">
-                  <img src="./imgs/about1.jpg" alt="" />
+                  <img src="./src/assets/imgs/about1.jpg" alt="" />
                 </div>
                 <div class="slider-dots">
                   <button class="switch active"></button>
@@ -112,13 +91,13 @@
           <div class="container">
             <h1>
               <span class="title">
-                <img src="./imgs/bottom-title.png" alt="" />
+                <img src="./src/assets/imgs/bottom-title.png" alt="" />
                 <span> ẨM THỰC </span>
               </span>
             </h1>
             <div class="cuisine-content">
               <div class="cuisine-item">
-                <img src="./imgs/cuisine4.png" alt="" />
+                <img src="./src/assets/imgs/cuisine4.png" alt="" />
                 <div class="cuisine-text">
                   <h3>THỊT RANG CHÁY CẠNH</h3>
                   <p>
@@ -138,10 +117,13 @@
                     đẹp mắt nhất.
                   </p>
                 </div>
-                <img src="./imgs/cuisine3.png" alt="" />
+                <img src="./src/assets/imgs/cuisine3.png" alt="" />
               </div>
               <div class="cuisine-item">
-                <img src="./imgs/cuisine1.png" alt="thit-kho-trung" />
+                <img
+                  src="./src/assets/imgs/cuisine1.png"
+                  alt="thit-kho-trung"
+                />
                 <div class="cuisine-text">
                   <h3>THỊT KHO TRỨNG CÚT</h3>
                   <p>
@@ -160,7 +142,7 @@
                     giác đồng quê quen thuộc, cảm giác của hương vị quê hương.
                   </p>
                 </div>
-                <img src="./imgs/cuisine2.png" alt="" />
+                <img src="./src/assets/imgs/cuisine2.png" alt="" />
               </div>
             </div>
           </div>
@@ -174,27 +156,80 @@
             </h1>
             <div class="space-content">
               <div class="space-item">
-                <img src="./imgs/space1.png" alt="khong-gian-quan-1" />
+                <img
+                  src="./src/assets/imgs/space1.png"
+                  alt="khong-gian-quan-1"
+                />
               </div>
               <div class="space-item" id="mid">
-                <img src="./imgs/space2.png" alt="khong-gian-quan-1" />
+                <img
+                  src="./src/assets/imgs/space2.png"
+                  alt="khong-gian-quan-1"
+                />
               </div>
               <div class="space-item">
-                <img src="./imgs/space2.png" alt="khong-gian-quan-1" />
+                <img
+                  src="./src/assets/imgs/space2.png"
+                  alt="khong-gian-quan-1"
+                />
               </div>
             </div>
             <div>
               <h1>
                 <span class="more-title">
-                  <img src="./imgs/btn-submit.png" alt="" />
-                  <span> XEM THÊM</span>
+                  <img src="./src/assets/imgs/btn-submit.png" alt="" />
+                  <span><a href="">XEM THÊM</a></span>
                 </span>
               </h1>
             </div>
           </div>
         </div>
+        <div class="media">
+          <div class="container media_container">
+            <h1>
+              <span class="title">
+                <img src="./src/assets/imgs/bottom-title.png" alt="dashed" />
+                <span> TRUYỀN THÔNG</span>
+              </span>
+            </h1>
+            <div class="media_content">
+              <div id="play_button">
+                <a href="https://www.youtube.com/watch?v=3zcLgiolz1E"
+                  ><i class="fa-regular fa-circle-play"></i
+                ></a>
+              </div>
+              <div class="media_img">
+                <a href="https://www.youtube.com/watch?v=3zcLgiolz1E"
+                  ><img src="./src/assets/imgs/media.jpg" alt="media_img"
+                /></a>
+
+                <div id="description">
+                  <h3>
+                    <a href="https://www.youtube.com/watch?v=3zcLgiolz1E"
+                      >Hanoi Food Review</a
+                    >
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback">
+        <div class="container feedback_container">
+          <h1>
+            <span class="title">
+              <img src="./src/assets/imgs/bottom-title.png" alt="" />
+              <span>Cảm nhận khách hàng</span>
+            </span>
+          </h1>
+          <div class="feedback_content"></div>
+          <div class="feedback_dots slider-dots"></div>
+        </div>
       </div>
     </div>
+    <footer id="footer" class="footer"></footer>
   </body>
-  <script src="../scripts/scripts.js"></script>
+  <script src="./src/scripts/insert.js"></script>
+  <script src="./src/scripts/scripts.js"></script>
 </html>
