@@ -3,8 +3,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 //------------------------------------------------------------------------------Home page
 
-
-//hamburger menu
+//burger menu
 const menu = $("#menu");
 
 menu.addEventListener("click", () => {
@@ -152,7 +151,7 @@ const fetchData = async () => {
         currentDot.classList.add("active");
         displayFeedback(parseInt(currentDot.dataset.id));
         currentIndex = (currentIndex + 1) % feedbacks.length;
-      }, 10000);
+      }, 150000);
     };
 
     if (feedbacks.length > 0) {
@@ -165,4 +164,3 @@ const fetchData = async () => {
 };
 fetchData();
 //------------------------------------------------------------------------------Home page
-

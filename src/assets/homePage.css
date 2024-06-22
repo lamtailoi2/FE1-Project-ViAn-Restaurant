@@ -166,6 +166,7 @@ body a {
   list-style-type: none;
   display: flex;
   justify-content: center;
+  
   left: 50%;
   bottom: 20px;
   transform: translate(-50%, -20%);
@@ -205,7 +206,8 @@ body a {
 
 .about-us {
   background-image: url("./imgs/bg-about-2.webp");
-  background-size: 100% 950px;
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -383,7 +385,7 @@ strong {
 .cuisine-item img {
   width: 90%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .space {
@@ -582,7 +584,7 @@ strong {
   background-size: 600px;
   opacity: 0.3;
   z-index: 1;
-  pointer-events: none; /*Allow to click*/
+  pointer-events: none;
 }
 
 .feedback_container {
@@ -601,13 +603,23 @@ strong {
   align-items: center;
   flex-direction: column;
   margin: 0px 250px;
-  gap: 30px;
+  gap: 20px;
 }
 
 .feedback_img img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
+
+.feedback_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  max-width: 600px;
+  padding: 10px;
+  text-align: justify; 
 }
 
 .feedback_text p {
@@ -628,7 +640,9 @@ strong {
   top: 110%;
   transform: translateX(-50%);
   cursor: pointer;
+  flex-wrap: wrap;
 }
+
 
 button.feedback_switch {
   cursor: pointer;
@@ -831,12 +845,21 @@ button.feedback_switch {
     padding: 0 10px;
   }
 
+  .cuisine-item img {
+    object-fit: contain;
+  }
+
   .media_img {
     width: 100%;
     padding: 0 10px;
   }
   #description a {
     padding: 0 10px;
+  }
+
+  .feedback_text {
+    text-align: left;
+    width: 200%;
   }
 
   .footer_container {
