@@ -75,9 +75,13 @@
 .contact-info_content a{
     color: black;
     text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
 }
 .contact-info_content a:hover {
-    color: #dfc5ab;
+    color: #754f3d;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
     text-decoration: none;
 }
 .contact-info_map {
@@ -86,6 +90,10 @@
     height: 300px;
     margin: 60px 0;
     border-radius: 5%;
+}
+.contact-info_map:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
 }
 iframe {
     width: 100%; 
