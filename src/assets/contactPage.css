@@ -40,3 +40,20 @@
     font-weight: 500;
     letter-spacing: 0.5px;
 }
+.contact-info{
+   position: relative;
+   background-color: #f2e6e2;
+   background-size: 100% 600px;
+   width: 100%;
+}
+.contact-info::after{
+    content: '';
+    position: absolute;
+    background-image: url(./imgs/noise-black.png);
+    opacity: 0.4;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
