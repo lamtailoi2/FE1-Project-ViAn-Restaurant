@@ -44,6 +44,7 @@
    position: relative;
    background-color: #f2e6e2;
    display: flex;
+   padding-right: 60px;
 }
 .contact-info::before{
     content: '';
@@ -57,10 +58,10 @@
     height: 100%;
 }
 .contact-info_content {
-    padding: 50px;
+    padding: 30px;
     letter-spacing: 1.2px;
-    line-height: 2;
-    flex: 1;
+    line-height: 1.7;
+    flex: 2;
     z-index: 1;
 }
 .contact-info_content h2 {
@@ -79,5 +80,18 @@
     color: #dfc5ab;
     text-decoration: none;
 }
-
+.contact-info_map {
+    flex: 2;
+    position: relative;
+    height: 300px;
+    margin: 60px 0;
+    border-radius: 5%;
+}
+iframe {
+    width: 100%; 
+    height: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
