@@ -45,6 +45,7 @@
    background-color: #f2e6e2;
    display: flex;
    padding-right: 60px;
+   
 }
 .contact-info::before{
     content: '';
@@ -101,5 +102,22 @@ iframe {
     position: absolute;
     top: 0;
     left: 0;
+    
 }
+/* tablet */
+@media screen and (max-width: 1025px){
+    .contact-info {
+        flex-direction: column;
+        padding: 20px; 
+    }
 
+    .contact-info_content {
+        order: -1;
+        max-height: 100%;
+    }
+
+    .contact-info_map {
+        order: 1;
+        min-height: 400px;
+    }
+}
