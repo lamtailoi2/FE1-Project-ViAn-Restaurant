@@ -15,7 +15,7 @@ const insertHeader = () => {
                 <li class="nav_items"> <a href="">THỰC ĐƠN</a></li>
                 <li class="nav_items"> <a href="">ĐẶT BÀN</a></li>
                 <li class="nav_items"> <a href="">ALBUM ẢNH</a></li>
-                <li class="nav_items"> <a href="../src/contactPage.html">LIÊN HỆ</a></li>
+                <li class="nav_items"> <a href="/contactPage.html">LIÊN HỆ</a></li>
               </ul>
             </div>
             <div class="nav_lang">
