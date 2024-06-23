@@ -802,7 +802,7 @@ button.feedback_switch {
     width: 100%;
     height: max-content;
     background: rgb(110, 69, 59);
-    z-index: 3;
+    z-index: 5;
     position: absolute;
     top: 55px;
     padding: 10px;
