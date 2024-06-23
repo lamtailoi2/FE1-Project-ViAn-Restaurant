@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./homePage.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./imgs/vian_logo.png"
+    />
+    <link rel="stylesheet" href="./homePage.css">
     <link rel="stylesheet" href="./menu.css">
     <title>Vị An - Cơm ngon trọn vị | Nhà hàng cơm Việt</title>
   </head>
@@ -12,30 +17,49 @@
       <header id="header">
         <nav id="navbar">
           <div class="nav_container">
-            <a class="nav_icon" href=""
+            <a class="nav_icon" href="../../index.html"
               ><img
                 src="https://nhahangvian.com/wp-content/themes/vian/images/nhahangvian-logo.png"
-                alt=""
+                alt="Nha hang Vi An"
             /></a>
             <div class="item_container">
-                <ul>
-                    <li class="nav_items">
-                      <a href="./index.html">GIỚI THIỆU</a>
-                    </li>
-                    <li class="nav_items">
-                      <a href="./menu.html">THỰC ĐƠN</a>
-                    </li>
-                    <li class="nav_items">ĐẶT BÀN</li>
-                    <li class="nav_items">ALBUM ẢNH</li>
-                    <li class="nav_items">LIÊN HỆ</li>
-                  </ul>
+              <ul>
+                <li class="nav_items">GIỚI THIỆU</li>
+                <li class="nav_items">THỰC ĐƠN</li>
+                <li class="nav_items">ĐẶT BÀN</li>
+                <li class="nav_items">ALBUM ẢNH</li>
+                <li class="nav_items">LIÊN HỆ</li>
+              </ul>
             </div>
             <div class="nav_lang">
               <input type="text" class="nav_search" placeholder="Tìm kiếm" />
               <a href=""><span>EN</span></a>
             </div>
           </div>
-        </nav>
+          <div class="wrapped_nav">
+            <div class="wrapped_container">
+              <i id="menu" class="fa-solid fa-bars"></i>
+              <a class="nav_icon" href="../../index.html"
+                ><img
+                  src="https://nhahangvian.com/wp-content/themes/vian/images/nhahangvian-logo.png"
+                  alt=""
+              /></a>
+              <a href=""><span>EN</span></a>
+            </div>
+            <div class="nav_link">
+              <ul>
+                <li class="nav_items">GIỚI THIỆU</li>
+                <li class="nav_items">THỰC ĐƠN</li>
+                <li class="nav_items">ĐẶT BÀN</li>
+                <li class="nav_items">ALBUM ẢNH</li>
+                <li class="nav_items">LIÊN HỆ</li>
+                <li class="nav_items">
+                  <input type="text" placeholder="Tìm kiếm" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav> 
       </header>
     </div>
     <div class="wide-banner">
@@ -45,14 +69,28 @@
       </div>
     </div>
     <div class="menu">
-      <img class="menu-img" src="imgs/menu-1.jpg" alt="page-1">
-      <img class="menu-img" src="imgs/menu-2.jpg" alt="page-2">
-      <img class="menu-img" src="imgs/menu-3.jpg" alt="page-3">
-      <img class="menu-img" src="imgs/menu-4.jpg" alt="page-4">
-      <img class="menu-img" src="imgs/menu-5.jpg" alt="page-5">
-      <img class="menu-img" src="imgs/menu-6.jpg" alt="page-6">
-      <img class="menu-img" src="imgs/menu-7.jpg" alt="page-7">
-      <img class="menu-img" src="imgs/menu-8.jpg" alt="page-8">
+
+      <div class="group-menu-pictures">
+        <img class="menu-img" src="imgs/menu-1.jpg" alt="page-1">
+        <img class="menu-img" src="imgs/menu-2.jpg" alt="page-2">
+      </div>
+
+      <div class="group-menu-pictures">
+        <img class="menu-img" src="imgs/menu-3.jpg" alt="page-3">
+        <img class="menu-img" src="imgs/menu-4.jpg" alt="page-4">
+      </div>
+
+      <div class="group-menu-pictures">
+        <img class="menu-img" src="imgs/menu-5.jpg" alt="page-5">
+        <img class="menu-img" src="imgs/menu-6.jpg" alt="page-6">
+      </div>
+
+      <div class="group-menu-pictures">
+        <img class="menu-img" src="imgs/menu-7.jpg" alt="page-7">
+        <img class="menu-img" src="imgs/menu-8.jpg" alt="page-8">
+      </div>
+
     </div>
   </body>
+  <script src="../scripts/scripts.js"></script>
 </html>
