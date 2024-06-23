@@ -4,7 +4,7 @@ const insertHeader = () => {
   header.innerHTML = `
         <nav id="navbar">
           <div class="nav_container">
-            <a class="nav_icon" href="/index.html"
+            <a class="nav_icon" href="./index.html"
               ><img
                 src="https://nhahangvian.com/wp-content/themes/vian/images/nhahangvian-logo.png"
                 alt="logo"
@@ -15,7 +15,7 @@ const insertHeader = () => {
                 <li class="nav_items"> <a href="">THỰC ĐƠN</a></li>
                 <li class="nav_items"> <a href="">ĐẶT BÀN</a></li>
                 <li class="nav_items"> <a href="">ALBUM ẢNH</a></li>
-                <li class="nav_items"> <a href="/contactPage.html">LIÊN HỆ</a></li>
+                <li class="nav_items"> <a href="./contactPage.html">LIÊN HỆ</a></li>
               </ul>
             </div>
             <div class="nav_lang">
