@@ -87,14 +87,15 @@ body a {
 .nav_items {
   margin: 0px 10px;
   padding: 0px 12px;
-  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-
-.nav_items:hover {
+.nav_items a {
+  color: rgb(255, 255, 255);
+}
+.nav_items a:hover {
   color: #ddc5a5;
 }
 
@@ -899,5 +900,4 @@ button.feedback_switch {
   .about-img-slider {
     height: 50%;
   }
-  
 }

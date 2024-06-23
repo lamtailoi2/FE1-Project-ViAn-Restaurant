@@ -4,18 +4,18 @@ const insertHeader = () => {
   header.innerHTML = `
         <nav id="navbar">
           <div class="nav_container">
-            <a class="nav_icon" href=""
+            <a class="nav_icon" href="/index.html"
               ><img
                 src="https://nhahangvian.com/wp-content/themes/vian/images/nhahangvian-logo.png"
-                alt=""
+                alt="logo"
             /></a>
             <div class="item_container">
               <ul>
-                <li class="nav_items">GIỚI THIỆU</li>
-                <li class="nav_items">THỰC ĐƠN</li>
-                <li class="nav_items">ĐẶT BÀN</li>
-                <li class="nav_items">ALBUM ẢNH</li>
-                <li class="nav_items">LIÊN HỆ</li>
+                <li class="nav_items"> <a href="">GIỚI THIỆU</a></li>
+                <li class="nav_items"> <a href="">THỰC ĐƠN</a></li>
+                <li class="nav_items"> <a href="">ĐẶT BÀN</a></li>
+                <li class="nav_items"> <a href="">ALBUM ẢNH</a></li>
+                <li class="nav_items"> <a href="../src/contactPage.html">LIÊN HỆ</a></li>
               </ul>
             </div>
             <div class="nav_lang">
@@ -35,11 +35,11 @@ const insertHeader = () => {
             </div>
             <div class="nav_link">
               <ul>
-                <li class="nav_items">GIỚI THIỆU</li>
-                <li class="nav_items">THỰC ĐƠN</li>
-                <li class="nav_items">ĐẶT BÀN</li>
-                <li class="nav_items">ALBUM ẢNH</li>
-                <li class="nav_items">LIÊN HỆ</li>
+                <li class="nav_items"> <a href="">GIỚI THIỆU</a></li>
+                <li class="nav_items"> <a href="">THỰC ĐƠN</a></li>
+                <li class="nav_items"> <a href="">ĐẶT BÀN</a></li>
+                <li class="nav_items"> <a href="">ALBUM ẢNH</a></li>
+                <li class="nav_items"> <a href="../src/contactPage.html">LIÊN HỆ</a></li>
                 <li class="nav_items">
                   <input type="text" placeholder="Tìm kiếm" />
                 </li>
