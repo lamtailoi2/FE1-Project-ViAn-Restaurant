@@ -3,58 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./imgs/vian_logo.png" />
-    <link href="./homePage.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/assets/imgs/vian_logo.png"
+    />
+    <link href="./src/assets/homePage.css" rel="stylesheet" />
     <title>Vị An - Cơm ngon trọn vị | Nhà hàng cơm Việt</title>
-    <style>
-    </style>
+    <style></style>
   </head>
   <body>
     <div>
-      <header id="header">
-        <nav id="navbar">
-          <div class="nav_container">
-            <a class="nav_icon" href=""
-              ><img
-                src="https://nhahangvian.com/wp-content/themes/vian/images/nhahangvian-logo.png"
-                alt=""
-            /></a>
-            <div class="item_container">
-              <ul>
-                <li class="nav_items">
-                  <a href="./index.html">GIỚI THIỆU</a>
-                </li>
-                <li class="nav_items">
-                  <a href="./menu.html">THỰC ĐƠN</a>
-                </li>
-                <li class="nav_items">ĐẶT BÀN</li>
-                <li class="nav_items">ALBUM ẢNH</li>
-                <li class="nav_items">LIÊN HỆ</li>
-              </ul>
-            </div>
-            <div class="nav_lang">
-              <input type="text" class="nav_search" placeholder="Tìm kiếm" />
-              <a href=""><span>EN</span></a>
+      <header id="header"></header>
+      <div
+        class="wide-banner full"
+        style="
+          background-image: url(https://nhahangvian.com/wp-content/uploads/2023/12/cau-long-bien.jpg);
+        "
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="inner text-center">
+                <h1 class="title m-0 fs-1">
+                  <span class="title-bg-image"><span>VỀ CHÚNG TÔI</span></span>
+                </h1>
+                <div class="description fs-5">
+                  <p>Nhà hàng Vị An</p>
+                </div>
+              </div>
             </div>
           </div>
-        </nav>
-      </header>
-      <div class="wide-banner full" style="background-image: url(https://nhahangvian.com/wp-content/uploads/2023/12/cau-long-bien.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="inner text-center">
-                        <h1 class="title m-0 fs-1">
-                            <span class="title-bg-image"><span>VỀ CHÚNG TÔI</span></span>
-                        </h1>
-                        <div class="description fs-5">
-                            <p>Nhà hàng Vị An</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
+      </div>
       <div class="main-content">
         <div class="home-top">
           <div class="slider">
@@ -63,7 +44,7 @@
                 <a href="">
                   <img
                     class="hometop-img"
-                    src="./imgs/hometop1.jpg"
+                    src="./src/assets/imgs/hometop1.jpg"
                     alt="img"
                   />
                 </a>
@@ -79,7 +60,7 @@
           <div class="container">
             <h1>
               <span class="title">
-                <img src="./imgs/bottom-title.png" alt="" />
+                <img src="./src/assets/imgs/bottom-title.png" alt="" />
                 <span> VỀ CHÚNG TÔI </span>
               </span>
             </h1>
@@ -113,14 +94,7 @@
               </div>
               <div class="about-img">
                 <div class="about-img-slider">
-                  <img src="./imgs/about1.jpg" alt="" />
-                </div>
-                <div class="slider-dots">
-                  <button class="switch active"></button>
-                  <button class="switch"></button>
-                  <button class="switch"></button>
-                  <button class="switch"></button>
-                  <button class="switch"></button>
+                  <img src="./src/assets/imgs/about1.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -130,13 +104,13 @@
           <div class="container">
             <h1>
               <span class="title">
-                <img src="./imgs/bottom-title.png" alt="" />
+                <img src="./src/assets/imgs/bottom-title.png" alt="" />
                 <span> ẨM THỰC </span>
               </span>
             </h1>
             <div class="cuisine-content">
               <div class="cuisine-item">
-                <img src="./imgs/cuisine4.png" alt="" />
+                <img src="./src/assets/imgs/cuisine4.png" alt="" />
                 <div class="cuisine-text">
                   <h3>THỊT RANG CHÁY CẠNH</h3>
                   <p>
@@ -156,10 +130,10 @@
                     đẹp mắt nhất.
                   </p>
                 </div>
-                <img src="./imgs/cuisine3.png" alt="" />
+                <img src="./src/assets/imgs/cuisine3.png" alt="" />
               </div>
               <div class="cuisine-item">
-                <img src="./imgs/cuisine1.png" alt="thit-kho-trung" />
+                <img src="./src/assets/imgs/cuisine1.png" alt="thit-kho-trung" />
                 <div class="cuisine-text">
                   <h3>THỊT KHO TRỨNG CÚT</h3>
                   <p>
@@ -178,7 +152,7 @@
                     giác đồng quê quen thuộc, cảm giác của hương vị quê hương.
                   </p>
                 </div>
-                <img src="./imgs/cuisine2.png" alt="" />
+                <img src="./src/assets/imgs/cuisine2.png" alt="" />
               </div>
             </div>
           </div>
@@ -192,19 +166,28 @@
             </h1>
             <div class="space-content">
               <div class="space-item">
-                <img src="./imgs/space1.png" alt="khong-gian-quan-1" />
+                <img
+                  src="./src/assets/imgs/space1.png"
+                  alt="khong-gian-quan-1"
+                />
               </div>
               <div class="space-item" id="mid">
-                <img src="./imgs/space2.png" alt="khong-gian-quan-1" />
+                <img
+                  src="./src/assets/imgs/space2.png"
+                  alt="khong-gian-quan-1"
+                />
               </div>
               <div class="space-item">
-                <img src="./imgs/space2.png" alt="khong-gian-quan-1" />
+                <img
+                  src="./src/assets/imgs/space2.png"
+                  alt="khong-gian-quan-1"
+                />
               </div>
             </div>
             <div>
               <h1>
                 <span class="more-title">
-                  <img src="./imgs/btn-submit.png" alt="" />
+                  <img src="./src/assets/imgs/btn-submit.png" alt="" />
                   <span> XEM THÊM</span>
                 </span>
               </h1>
@@ -214,5 +197,5 @@
       </div>
     </div>
   </body>
-  <script src="../scripts/scripts.js"></script>
+  <script src="./src/scripts/insert.js"></script>
 </html>
