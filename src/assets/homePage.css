@@ -246,6 +246,7 @@ body a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .title span {
@@ -828,6 +829,15 @@ button.feedback_switch {
     color: #855e51;
     font-weight: 100;
   }
+
+  .title {
+    margin-top: 30px;
+  }
+
+  .title span {
+    font-size: 2rem;
+  }
+
   .about-us {
     padding: 10px 0;
   }
