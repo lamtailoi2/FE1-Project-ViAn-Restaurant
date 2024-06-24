@@ -46,16 +46,16 @@
   position: relative;
   background-color: #f2e6e2;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  
+  gap: 200px;
   padding: 0 250px;
 }
 
 .contact-info_map {
   position: relative;
-  height: 300px;
-  width: 500px;
+  height: 350px;
+  width: 625px;
   border: 0;
   margin: 60px 0;
   border-radius: 5%;
