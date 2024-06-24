@@ -258,12 +258,12 @@ body a {
 .title img {
   width: 250px;
   height: 40px;
+  position: absolute;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: absolute;
-  z-index: 1;
   left: 50%;
+  z-index: 1;
   bottom: 30%;
   transform: translateX(-50%);
 }
@@ -802,7 +802,7 @@ button.feedback_switch {
     width: 100%;
     height: max-content;
     background: rgb(110, 69, 59);
-    z-index: 3;
+    z-index: 5;
     position: absolute;
     top: 55px;
     padding: 10px;
