@@ -1,150 +1,125 @@
 @font-face {
-    font-family: "iCielDownTown";
-    src: url("./fonts/iCielBCDowntown-Regular.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "iCielDownTown";
+  src: url("./fonts/iCielBCDowntown-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-font-family: "SFProDisplay";
-src: url("./fonts/SF-PRO-DISPLAY-REGULAR.OTF") format("opentype");
-font-weight: normal;
-font-style: normal;
+  font-family: "SFProDisplay";
+  src: url("./fonts/SF-PRO-DISPLAY-REGULAR.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-font-family: "SFProDisplayHeavy";
-src: url("./fonts/SF-PRO-DISPLAY-HEAVY.OTF") format("opentype");
-font-weight: 900;
-font-style: normal;
+  font-family: "SFProDisplayHeavy";
+  src: url("./fonts/SF-PRO-DISPLAY-HEAVY.OTF") format("opentype");
+  font-weight: 900;
+  font-style: normal;
 }
-
-/* .noise-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("imgs/noise-black.png");
-    pointer-events: none; /* Thêm pointer-events: none để cho phép tương tác với các phần tử bên dưới
-    z-index: 2;
-} */
 
 .menu {
-    width: 100%;
-    height: auto;
-    padding: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cuisine {
-    background-color: #f2e6e2;
-    background-size: 100% 600px;
-    width: 100%;
-    max-width: 100vw;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 5rem 0;
-    z-index: 1;
+  background-color: #f2e6e2;
+  background-size: 100% 600px;
+  width: 100%;
+  max-width: 100vw;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 5rem 0;
+  z-index: 1;
 }
-
-/* .cuisine::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    /* background-image: url("imgs/noise-black.png"); 
-    background-size: 500px;
-    opacity: 0.3;
-    z-index: 1;
-} */
 
 .menu .menu-img {
-    flex: 0 0 auto;
-    width: 636px;
-    height: 100%;
-    padding: 12px;
+  flex: 0 0 auto;
+  width: 636px;
+  height: 100%;
+  padding: 12px;
 }
- 
+
 .wide-banner {
-    position: relative;
-    width: 100%;
-    height: 387px;
-    display: flex;
-    background-image: url("imgs/cau-long-bien.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 387px;
+  display: flex;
+  background-image: url("imgs/cau-long-bien.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .wide-banner::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #f2e6e2;
-    opacity: 0.5;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f2e6e2;
+  opacity: 0.5;
+  z-index: 1;
 }
 
-
 .menu .group-menu-pictures {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
 }
 
 .title {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    font-family: "icielDownTown";
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: rgb(110, 69, 59);
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0px;
-    z-index: 3;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: "icielDownTown";
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(110, 69, 59);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0px;
+  z-index: 3;
 }
 
 .title span {
-    font-size: 3.5rem;
-    display: inline-block;
-    margin-bottom: 0px;
-    z-index: 2;
+  font-size: 3.5rem;
+  display: inline-block;
+  margin-bottom: 0px;
+  z-index: 2;
 }
 
 .title img {
-    width: 250px;
-    height: 40px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%);
+  width: 250px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 980px) {
-    .menu .menu-img {
-        width: 100%;
-    }
+  .menu .menu-img {
+    width: 100%;
+  }
 }
