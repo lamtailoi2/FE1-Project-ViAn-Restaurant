@@ -910,4 +910,14 @@ button.feedback_switch {
   .about-img-slider {
     height: 50%;
   }
+  .more-title {
+    margin-top: 10px;
+  }
+  .more-title span {
+    font-size: 20px;
+  }
+  .more-title img {
+    width: 150px;
+    height: 35px;
+  }
 }
