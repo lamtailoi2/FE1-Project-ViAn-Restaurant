@@ -87,14 +87,15 @@ body a {
 .nav_items {
   margin: 0px 10px;
   padding: 0px 12px;
-  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-
-.nav_items:hover {
+.nav_items a {
+  color: rgb(255, 255, 255);
+}
+.nav_items a:hover {
   color: #ddc5a5;
 }
 
@@ -166,7 +167,7 @@ body a {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  
+
   left: 50%;
   bottom: 20px;
   transform: translate(-50%, -20%);
@@ -245,6 +246,7 @@ body a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .title span {
@@ -257,12 +259,12 @@ body a {
 .title img {
   width: 250px;
   height: 40px;
+  position: absolute;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: absolute;
-  z-index: 1;
   left: 50%;
+  z-index: 1;
   bottom: 30%;
   transform: translateX(-50%);
 }
@@ -399,7 +401,7 @@ strong {
   padding: 5rem 0;
 }
 
-.space::before {
+/* .space::before {
   content: "";
   position: absolute;
   left: 0;
@@ -410,7 +412,7 @@ strong {
   background-size: 600px;
   opacity: 0.3;
   z-index: 1;
-}
+} */
 
 .space-content {
   position: relative;
@@ -422,7 +424,6 @@ strong {
 .space-item img {
   height: auto;
   width: 80%;
-  gap: 10px;
   max-width: 600px;
 }
 
@@ -616,10 +617,10 @@ strong {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; 
+  width: 100%;
   max-width: 600px;
   padding: 10px;
-  text-align: justify; 
+  text-align: justify;
 }
 
 .feedback_text p {
@@ -642,7 +643,6 @@ strong {
   cursor: pointer;
   flex-wrap: wrap;
 }
-
 
 button.feedback_switch {
   cursor: pointer;
@@ -803,7 +803,7 @@ button.feedback_switch {
     width: 100%;
     height: max-content;
     background: rgb(110, 69, 59);
-    z-index: 3;
+    z-index: 5;
     position: absolute;
     top: 55px;
     padding: 10px;
@@ -829,6 +829,15 @@ button.feedback_switch {
     color: #855e51;
     font-weight: 100;
   }
+
+  .title {
+    margin-top: 30px;
+  }
+
+  .title span {
+    font-size: 2rem;
+  }
+
   .about-us {
     padding: 10px 0;
   }
@@ -857,9 +866,20 @@ button.feedback_switch {
     padding: 0 10px;
   }
 
+  #play_button:hover {
+    background-color: inherit;
+    padding: 0px;
+    width: 0;
+    height: 0;
+  }
+
   .feedback_text {
     text-align: left;
     width: 200%;
+  }
+
+  .feedback_dots {
+    row-gap: 10px;
   }
 
   .footer_container {
@@ -889,5 +909,15 @@ button.feedback_switch {
   }
   .about-img-slider {
     height: 50%;
+  }
+  .more-title {
+    margin-top: 10px;
+  }
+  .more-title span {
+    font-size: 20px;
+  }
+  .more-title img {
+    width: 150px;
+    height: 35px;
   }
 }
