@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./src/assets/imgs/vian_logo.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link href="./src/assets/homePage.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/assets/bookingPage.css" />
+    <title>Vị An - Cơm ngon trọn vị | Nhà hàng cơm Việt</title>
+  </head>
+  <body>
+    <header id="header"></header>
+    <div id="booking">
+      <div class="booking-banner">
+        <h1 class="booking-banner_title">ĐẶT BÀN</h1>
+        <h2 class="booking-banner_content">
+          Đặt bàn trước sẽ giúp quý khách lựa chọn được chỗ ngồi ưng ý và sự
+          chuẩn bị chu đáo nhất.
+        </h2>
+      </div>
+      <form class="booking-form">
+        <h2 class="booking-form_title">THỜI GIAN ĐẶT BÀN</h2>
+        <div class="booking-form_time">
+          <div class="time-input">
+            <label for="datetime-input">Thời gian</label>
+            <input
+              type="datetime-local"
+              id="datetime-input"
+              placeholder="Giờ đặt bàn"
+              required
+            />
+          </div>
+        </div>
+        <div class="booking-form_number">
+          <div class="number-input">
+            <label for="adults">Người lớn</label>
+            <input
+              type="number"
+              id="adults"
+              min="1"
+              value="2"
+              placeholder="Số lượng người lớn"
+              required
+            />
+            <label for="children">Trẻ em</label>
+            <input
+              type="number"
+              id="children"
+              min="0"
+              value="0"
+              placeholder="Số lượng trẻ em"
+            />
+          </div>
+        </div>
+        <h2 class="booking-form_title">THÔNG TIN NGƯỜI ĐẶT</h2>
+        <div class="booking-form_info">
+          <div class="info-input">
+            <label for="name">Họ tên</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Họ tên"
+              required
+            />
+            <label for="phone">Số điện thoại</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Số điện thoại"
+              required
+            />
+            <label for="notes">Lưu ý</label>
+            <textarea
+              id="notes"
+              placeholder="Lưu ý"
+            ></textarea>
+          </div>
+          <div class="booking-form_button">
+            <button type="submit">XÁC NHẬN ĐẶT BÀN</button>
+            <div class="booking-form_content">
+              <p>
+                Quý khách vui lòng đến trước thời gian đặt 15 phút để nhà hàng
+                phục vụ quý khách được tốt
+              </p>
+              <p>Cảm ơn quý khách!</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer id="footer" class="footer"></footer>
+    <script src="./src/scripts/insert.js"></script>
+    <script src="./src/scripts/scripts.js"></script>
+  </body>
+</html>
