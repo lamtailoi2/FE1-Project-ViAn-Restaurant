@@ -111,6 +111,13 @@ iframe {
   top: 0;
   left: 0;
 }
+
+@media screen and (min-height: 1300px) {
+  .contact-info {
+    height: 100vh;
+  }
+}
+
 /* tablet */
 @media screen and (max-width: 1025px) {
   .contact-info {
@@ -123,7 +130,6 @@ iframe {
     max-height: 100%;
     padding: 20px 50% 20px 50px;
     text-align: left;
-   
   }
 
   .contact-info {
@@ -133,7 +139,6 @@ iframe {
     justify-content: center;
     align-items: center;
     gap: 0;
-    
   }
 
   .contact-info_map {
@@ -144,7 +149,6 @@ iframe {
     margin: 60px 0;
     padding: 0 20px;
     border-radius: 5%;
-    
   }
 }
 /* mobile */
@@ -178,7 +182,6 @@ iframe {
   .contact-info {
     padding-right: 0;
   }
-
 
   .contact-info_content h2 {
     font-size: 25px;

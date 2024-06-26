@@ -22,6 +22,9 @@
 body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+
 }
 
 .title p {
@@ -95,24 +98,17 @@ body {
   margin: 10px;
 }
 
-/* .video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video iframe {
-    border-radius: 2%;
-} */
+
 
 .album {
     background-image: url("./imgs/bg-space.jpg");
-    background-size: 100% 100%; /* Thay đổi từ 'auto' thành '100% 850px' để đặt kích thước cố định cho ảnh nền */
+    background-size: 100% 100%;
     width: 100%;
-    height: 100%; /* Thay đổi từ 'auto' thành '100%' để chiều cao chiếm toàn bộ phần tử chứa */
-    max-width: 100vw; /* Thay đổi từ 'max-width: 100%;' thành 'max-width: 100vw' để giới hạn chiều rộng tối đa là 100% viewport width */
+    height: 100%; 
+    max-width: 100vw; 
     background-repeat: no-repeat;
-    position: relative; /* Thêm mới thuộc tính này để thiết lập vị trí tương đối */
-    padding: 48px 10px 48px 10px; /* Thay đổi từ 'padding-top: 48px; padding-bottom: 48px;' thành 'padding: 48px 0 48px 0;' để gọn gàng hơn */
+    position: relative; 
+    padding: 48px 10px 48px 10px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -244,6 +240,8 @@ body {
   text-align: center;
   padding-top: 12px;
 }
+
+
 
 @media screen and (max-width: 1269px) {
     .video iframe {

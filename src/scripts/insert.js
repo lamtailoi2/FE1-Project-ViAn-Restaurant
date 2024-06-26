@@ -13,7 +13,7 @@ const insertHeader = () => {
               <ul>
                 <li class="nav_items"> <a href="./about-us.html">GIỚI THIỆU</a></li>
                 <li class="nav_items"> <a href="./menu.html">THỰC ĐƠN</a></li>
-                <li class="nav_items"> <a href="">ĐẶT BÀN</a></li>
+                <li class="nav_items"> <a href="./bookingPage.html">ĐẶT BÀN</a></li>
                 <li class="nav_items"> <a href="">ALBUM ẢNH</a></li>
                 <li class="nav_items"> <a href="./contactPage.html">LIÊN HỆ</a></li>
               </ul>
@@ -37,7 +37,7 @@ const insertHeader = () => {
               <ul>
                 <li class="nav_items"> <a href="./about-us.html">GIỚI THIỆU</a></li>
                 <li class="nav_items"> <a href="./menu.html">THỰC ĐƠN</a></li>
-                <li class="nav_items"> <a href="">ĐẶT BÀN</a></li>
+                <li class="nav_items"> <a href="./bookingPage.html">ĐẶT BÀN</a></li>
                 <li class="nav_items"> <a href="">ALBUM ẢNH</a></li>
                 <li class="nav_items"> <a href="./contactPage.html">LIÊN HỆ</a></li>
                 <li class="nav_items">
