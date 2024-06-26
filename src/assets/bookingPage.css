@@ -43,7 +43,7 @@
 }
 .booking-form::before {
   content: "";
-  position: absolute;
+  position: fixed;
   background-image: url(./imgs/noise-black.png);
   opacity: 0.6;
   z-index: 0;
@@ -85,7 +85,6 @@
   flex: 1;
   gap: 20px;
 }
-.booking-form_time,
 .adults-input,
 .children-input,
 .time-input {
@@ -215,20 +214,37 @@ textarea:focus {
     -2px -2px 5px #b78b51;
   transition: box-shadow 0.3s ease;
 }
-@media screen and (max-width: 1025px){
-  .booking-form_time,
+@media screen and (max-width: 1025px) {
   .adults-input,
-  .children-input, 
+  .children-input,
   .time-input {
     flex-direction: column;
   }
-  .row{
+  .row {
     gap: 20px;
   }
-  .booking-form_time label,
+  .time-input label,
   .adults-input label,
   .children-input label {
-    margin-right: 0; 
+    margin-right: 0;
     margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .booking-form {
+    padding: 20px;
+  }
+  .booking-form_container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .time-input,
+  .adults-input,
+  .children-input {
+    flex: 1;
+  }
+  .info-container .row {
+    flex-direction: column;
+    gap: 10px;
   }
 }
