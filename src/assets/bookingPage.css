@@ -156,21 +156,51 @@ input[type="number"] {
 .phone-input input,
 .notes-input textarea,
 .booking-form_button button {
-  z-index: 1;
+  z-index: 2;
 }
 textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   height: 100px;
   resize: vertical;
+  margin-bottom: 10px;
 }
 input::placeholder,
 textarea::placeholder {
   color: #6e453b; /* Màu xám nhạt, bạn có thể thay đổi thành màu khác */
 }
+
+.booking-form_button {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+  align-items: center;   /* Căn giữa theo chiều ngang */
+}
+.booking-form_button img {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.booking-form_button button {
+  font-family: "iCielDownTown";
+  color: #e4ccac;
+  font-size: 38px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 20px;
+}
+
 .booking-form_content {
   font-family: "SFProDisplay";
   color: #6e453b;
   text-align: center;
-  margin-top: 20px;
+  letter-spacing: 1.2px;
+  margin-top: 30px;
+}
+.booking-form_content p {
+  margin-bottom: 20px; /* Khoảng cách dưới mỗi đoạn văn */
 }

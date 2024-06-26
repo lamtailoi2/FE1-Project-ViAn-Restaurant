@@ -27,77 +27,76 @@
         </h2>
       </div>
       <form class="booking-form">
-       
-          <h2 class="booking-form_title">THỜI GIAN ĐẶT BÀN</h2>
-          <div class="booking-form_container">
-            <div class="booking-form_time">
-              <div class="time-input">
-                <label for="datetime-input">Thời gian</label>
+        <h2 class="booking-form_title">THỜI GIAN ĐẶT BÀN</h2>
+        <div class="booking-form_container">
+          <div class="booking-form_time">
+            <div class="time-input">
+              <label for="datetime-input">Thời gian</label>
+              <input
+                type="datetime-local"
+                id="datetime-input"
+                placeholder="Giờ đặt bàn"
+                required
+              />
+            </div>
+          </div>
+          <div class="booking-form_number">
+            <div class="row">
+              <div class="adults-input">
+                <label for="adults">Người lớn</label>
                 <input
-                  type="datetime-local"
-                  id="datetime-input"
-                  placeholder="Giờ đặt bàn"
+                  type="number"
+                  id="adults"
+                  min="1"
+                  value="2"
+                  placeholder="Số lượng người lớn"
+                  required
+                />
+              </div>
+              <div class="children-input">
+                <label for="children">Trẻ em</label>
+                <input
+                  type="number"
+                  id="children"
+                  min="0"
+                  value="0"
+                  placeholder="Số lượng trẻ em"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="booking-form_title">THÔNG TIN NGƯỜI ĐẶT</h2>
+        <div class="booking-form_info">
+          <div class="info-container">
+            <div class="row">
+              <div class="name-input">
+                <input type="text" id="name" placeholder="Họ tên" required />
+              </div>
+              <div class="phone-input">
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Số điện thoại"
                   required
                 />
               </div>
             </div>
-            <div class="booking-form_number">
-              <div class="row">
-                <div class="adults-input">
-                  <label for="adults">Người lớn</label>
-                  <input
-                    type="number"
-                    id="adults"
-                    min="1"
-                    value="2"
-                    placeholder="Số lượng người lớn"
-                    required
-                  />
-                </div>
-                <div class="children-input">
-                  <label for="children">Trẻ em</label>
-                  <input
-                    type="number"
-                    id="children"
-                    min="0"
-                    value="0"
-                    placeholder="Số lượng trẻ em"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <h2 class="booking-form_title">THÔNG TIN NGƯỜI ĐẶT</h2>
-          <div class="booking-form_info">
-            <div class="info-container">
-              <div class="row">
-                <div class="name-input">
-                  <input type="text" id="name" placeholder="Họ tên" required />
-                </div>
-                <div class="phone-input">
-                  <input
-                    type="tel"
-                    id="phone"
-                    placeholder="Số điện thoại"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="notes-input">
+            <div class="notes-input">
               <textarea id="notes" placeholder="Lưu ý"></textarea>
             </div>
-            </div>
-            <div class="booking-form_button">
-              <button type="submit">XÁC NHẬN ĐẶT BÀN</button>
-              <div class="booking-form_content">
-                <p>
-                  Quý khách vui lòng đến trước thời gian đặt 15 phút để nhà hàng
-                  phục vụ quý khách được tốt
-                </p>
-                <p>Cảm ơn quý khách!</p>
-              </div>
-            </div>
           </div>
+          <div class="booking-form_button">
+            <img src="./src/assets/imgs/btn-submit.png" alt="#">
+            <button type="submit">XÁC NHẬN ĐẶT BÀN</button>
+          </div>
+            <div class="booking-form_content">
+              <p>
+                Quý khách vui lòng đến trước thời gian đặt 15 phút để nhà hàng
+                phục vụ quý khách được tốt
+              </p>
+              <p>Cảm ơn quý khách!</p>
+            </div>
         </div>
       </form>
     </div>
