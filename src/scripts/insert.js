@@ -11,11 +11,11 @@ const insertHeader = () => {
             /></a>
             <div class="item_container">
               <ul>
-                <li class="nav_items">GIỚI THIỆU</li>
                 <li class="nav_items">
-                  <a href="./src/assets/menu.html">
-                  THỰC ĐƠN
-                  </a>
+                  <a href="./src/assets/about-us.html">GIỚI THIỆU</a>
+                </li>
+                <li class="nav_items">
+                  <a href="./src/assets/menu.html">THỰC ĐƠN</a>
                 </li>
                 <li class="nav_items">ĐẶT BÀN</li>
                 <li class="nav_items">ALBUM ẢNH</li>
