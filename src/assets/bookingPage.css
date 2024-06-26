@@ -173,8 +173,8 @@ textarea::placeholder {
 .booking-form_button {
   margin-top: 20px;
   display: flex;
-  flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
-  align-items: center;   /* Căn giữa theo chiều ngang */
+  flex-direction: column; 
+  align-items: center;  
 }
 .booking-form_button img {
   width: 300px;
@@ -202,5 +202,18 @@ textarea::placeholder {
   margin-top: 30px;
 }
 .booking-form_content p {
-  margin-bottom: 20px; /* Khoảng cách dưới mỗi đoạn văn */
+  margin-bottom: 20px; 
+}
+.booking-form_button button:hover {
+  color: white; /* Màu nền mờ khi hover */
+  transition: color 0.3s ease;   /* Hiệu ứng chuyển đổi màu nền */
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow:  2px 2px 5px #b78b51, 
+  -2px 2px 5px #b78b51, 
+  2px -2px 5px #b78b51, 
+  -2px -2px 5px #b78b51; 
+  transition: box-shadow 0.3s ease;
 }
