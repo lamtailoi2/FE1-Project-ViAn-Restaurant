@@ -112,10 +112,12 @@ iframe {
   left: 0;
 }
 
-@media screen and (min-height: 1300px) {
+@media screen and (min-height: 1350px) {
   .contact-info {
     height: 100vh;
+    align-items: start;
   }
+  
 }
 
 /* tablet */
