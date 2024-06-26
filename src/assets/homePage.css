@@ -401,7 +401,7 @@ strong {
   padding: 5rem 0;
 }
 
-/* .space::before {
+.space::before {
   content: "";
   position: absolute;
   left: 0;
@@ -412,7 +412,7 @@ strong {
   background-size: 600px;
   opacity: 0.3;
   z-index: 1;
-} */
+}
 
 .space-content {
   position: relative;

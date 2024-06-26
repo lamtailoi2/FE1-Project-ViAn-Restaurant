@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "iCielDownTown";
+  src: url("./fonts/iCielBCDowntown-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("./fonts/SF-PRO-DISPLAY-REGULAR.OTF") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProDisplayHeavy";
+  src: url("./fonts/SF-PRO-DISPLAY-HEAVY.OTF") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.title p {
+  font-family: "SFProDisplay";
+  font-size: 20px;
+  margin: 10px;
+}
+
+.title img {
+  width: 250px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 45%;
+  transform: translateX(-50%);
+}
+
+.container-intro-video {
+  position: relative;
+  font-family: "SFProDisplay", sans-serif;
+  font-weight: lighter;
+  color: rgb(110, 69, 59, 1);
+  background-color: #f2e6e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  margin: 0 auto;
+}
+
+.noise-bg {
+  background-color: #f2e6e2;
+  background-size: 100% 600px;
+  width: 100%;
+  max-width: 100vw;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.noise-bg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("imgs/noise-black.png");
+  background-size: 500px;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content p {
+  color: #212529;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video iframe {
+  border-radius: 2%;
+  z-index: 3;
+}
+
+.album {
+  background-image: url("./imgs/bg-space.jpg");
+  background-size: 100% 850px;
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 48px 0 48px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.album::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("imgs/noise-black.png");
+  background-size: 600px;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.container-img {
+  max-width: 1296px;
+  width: 100%;
+  height: auto;
+  object-position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.part-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 1296px;
+  width: 100%;
+  height: auto;
+}
+
+.group-1 img {
+  width: 424px;
+  height: 547px;
+  object-fit: cover;
+  object-position: center;
+  padding-right: 6px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.group-2 {
+  display: flex;
+  flex-direction: column;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.group-2 img {
+  width: 424px;
+  height: 353px;
+  object-fit: cover;
+  object-position: center;
+  padding-bottom: 6px;
+}
+
+.row1 {
+  display: flex;
+  gap: 12px;
+}
+
+.row1 img {
+  width: 206px;
+  height: 182px;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 6px;
+}
+
+.group-3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 6px;
+}
+
+.group-3 img {
+  width: 424px;
+  height: 182px;
+  object-fit: cover;
+  object-position: center;
+  padding-bottom: 6px;
+}
+
+.row2 {
+  display: flex;
+  gap: 12px;
+}
+
+.row2 img {
+  width: 206px;
+  height: 353px;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 6px;
+}
+
+.part-2 {
+  max-width: 1296px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.part-2 img {
+  width: 206px;
+  height: 119px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.album h4 {
+  font-family: "iCielDownTown";
+  font-size: 40px;
+  color: #64473f;
+  text-align: center;
+}
+.album i {
+  font-family: "SFProDisplay";
+  color: #212529;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 12px;
+}
