@@ -1,0 +1,36 @@
+.album-banner {
+  position: relative;
+  background-image: linear-gradient(
+      rgba(255, 237, 233, 0.7),
+      rgba(255, 237, 233, 0.7)
+    ),
+    url(./imgs/noise-black.png), url(./imgs/bg-contact.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 7.5%;
+  text-align: center;
+  z-index: -2;
+}
+.album-banner_title {
+  font-family: "iCielDownTown";
+  position: relative;
+  color: #6e453b;
+  font-size: 40px;
+  letter-spacing: 1.2px;
+  z-index: 1;
+}
+.album-banner_title::after {
+  content: "";
+  background-image: url(./imgs/bottom-title.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
