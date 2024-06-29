@@ -42,7 +42,6 @@
   height: 100%;
   background-repeat: no-repeat;
   position: relative;
-  padding-bottom: 5rem ;
   padding-top: 3rem;
 }
 .album-container::before {
@@ -182,4 +181,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.album-image_vip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.album-vip{
+  background-image: url("./imgs/bg-space.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 5rem;
+}
+.album-vip::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("imgs/noise-black.png");
+  background-size: 500px;
+  opacity: 0.3;
+  z-index: 1;
 }
