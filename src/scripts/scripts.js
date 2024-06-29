@@ -129,7 +129,7 @@ const fetchData = async () => {
     });
 
     const displayFeedback = async (id) => {
-      const feedback = feedbacks.find((fb) => parseInt(fb.id) === id);
+      const feedback = await feedbacks.find((fb) => parseInt(fb.id) === id);
       if (feedback) {
         feedbackContent.innerHTML = `
           <div class="feedback_img">
