@@ -63,7 +63,7 @@
   font-size: 30px;
   color: #64473f;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 .space-content{
   font-family: "SFProDisplay";
@@ -136,8 +136,8 @@
 }
 .album-image_floor1 {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Chia thành 4 cột bằng nhau */
-  grid-template-rows: repeat(4, 180px); /* 3 hàng tự động điều chỉnh */
+  grid-template-columns: repeat(6, 1fr); 
+  grid-template-rows: repeat(4, 180px); 
   gap: 10px; 
   max-width: 1296px;
   grid-template-areas: 
@@ -176,5 +176,10 @@
 .floor1 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Giữ tỷ lệ ảnh và lấp đầy khung */
+  object-fit: cover;
+}
+.album-image_floor2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
