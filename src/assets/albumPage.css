@@ -65,6 +65,14 @@
   text-align: center;
   margin-bottom: 20px;
 }
+.space-content{
+  font-family: "SFProDisplay";
+  font-size: 20px;
+  color: #64473f;
+  text-align: center;
+  margin: 20px;
+  padding-bottom: 30px;
+}
 .album-image_space {
   display: flex;
   justify-content: center;
@@ -73,7 +81,7 @@
 .row-full {
   display: grid;
   grid-template-columns: repeat(6, 1fr); 
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(3, 180px);
   grid-gap: 10px;
   max-width: 1296px;
 }
@@ -105,12 +113,10 @@
   grid-column: 5 / 6; 
   grid-row: 2 / 4; 
 }
-
 .top-row:nth-child(7) {
   grid-column: 6 / 7; 
   grid-row: 2 / 4; 
 }
-
 .bottom-row {   
   height: 120px;
   width: 205px;
@@ -122,4 +128,53 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.image-floor_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.album-image_floor1 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Chia thành 4 cột bằng nhau */
+  grid-template-rows: repeat(4, 180px); /* 3 hàng tự động điều chỉnh */
+  gap: 10px; 
+  max-width: 1296px;
+  grid-template-areas: 
+    "floor1-1 floor1-1 floor1-2 floor1-2 floor1-5 floor1-5"
+    "floor1-1 floor1-1 floor1-2 floor1-2 floor1-6 floor1-7"
+    "floor1-1 floor1-1 floor1-3 floor1-4 floor1-6 floor1-7"
+    "floor1-8 floor1-9 .        .        .        .";
+}
+.floor1:first-child{
+  grid-area: floor1-1;
+}
+.floor1:nth-child(2){
+  grid-area: floor1-2;
+}
+.floor1:nth-child(3){
+  grid-area: floor1-3;
+}
+.floor1:nth-child(4){
+  grid-area: floor1-4;
+}
+.floor1:nth-child(5){
+  grid-area: floor1-5;
+}
+.floor1:nth-child(6){
+  grid-area: floor1-6;
+}
+.floor1:nth-child(7){
+  grid-area: floor1-7;
+}
+.floor1:nth-child(8){
+  grid-area: floor1-8;
+}
+.floor1:nth-child(9){
+  grid-area: floor1-9;
+}
+.floor1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Giữ tỷ lệ ảnh và lấp đầy khung */
 }
