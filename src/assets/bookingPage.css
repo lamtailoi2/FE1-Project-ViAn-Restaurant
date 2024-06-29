@@ -41,17 +41,45 @@
   letter-spacing: 0.5px;
   z-index: 1;
 }
+
+.booking-form {
+  background-color: #f2e6e2;
+  background-size: 100% 600px;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 5rem 0;
+}
+
 .booking-form::before {
   content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("imgs/noise-black.png");
+  background-size: 500px;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* .booking-form::before {
+  content: "";
   position: fixed;
-  background-image: url(./imgs/noise-black.png);
+  background-image: url("imgs/noise-black.png");
+  background-size: 500px;
   opacity: 0.6;
   z-index: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+  pointer-events: none;
+} */
 .booking-form_title {
   font-family: "iCielDownTown";
   position: relative;
@@ -214,6 +242,13 @@ textarea:focus {
     -2px -2px 5px #b78b51;
   transition: box-shadow 0.3s ease;
 }
+
+@media screen and (min-height: 1500px) {
+  .booking-form {
+    height: 100vh;
+  }
+}
+
 @media screen and (max-width: 1025px) {
   .adults-input,
   .children-input,

@@ -537,10 +537,10 @@ strong {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   padding: 100px;
-  top: 56%;
+  top: 58%;
   left: 50%;
   width: 900px;
-  height: 86%;
+  height: 83%;
 }
 
 #description a {
@@ -754,7 +754,15 @@ button.feedback_switch {
     justify-content: space-around;
     padding: 0 10px;
   }
-
+  /* #play_button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    padding: 100px;
+    top: 58%;
+    left: 50%;
+    width: 900px;
+    height: 83%;
+  } */
   .footer_container {
     display: flex;
     flex-direction: column;
