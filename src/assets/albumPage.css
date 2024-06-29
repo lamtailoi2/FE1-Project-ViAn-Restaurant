@@ -210,3 +210,6 @@
   opacity: 0.3;
   z-index: 1;
 }
+@media screen and (max-width: 1025px) {
+  
+}
